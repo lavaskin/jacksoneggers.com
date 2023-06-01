@@ -1,1 +1,75 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+
+	/* Color variables */
+	--color-text-dark: #151515;
+	--color-text-light: #f0f0f0;
+	--color-accent: #4381C1;
+	--color-fg: #98c1d9;
+	--color-bg: #e0fbfc;
+
+	text-transform: lowercase;
+}
+
+img {
+	max-width: 100%;
+}
+
+a {
+	color: var(--color-accent);
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+
+.container {
+	background-color: var(--color-fg);
+	border: 0.25rem solid var(--color-accent);
+	border-radius: 0.5rem;
+	color: var(--color-text-dark);
+	padding: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+	.container {
+		max-width: 100%;
+	}	
+}
+
+.page {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	padding: 2rem;
+	max-width: 70vw;
+	margin: 0 auto;
+	align-items: center;
+}
+
+/* Container width shrinkers */
+@media screen and (max-width: 1700px) {
+	.page {
+		max-width: 70vw;
+	}
+}
+@media screen and (max-width: 1400px) {
+	.page {
+		max-width: 85vw;
+	}
+}
+@media screen and (max-width: 1200px) {
+	.page {
+		max-width: 95vw;
+	}
+}
+@media screen and (max-width: 768px) {
+	.page {
+		max-width: 100vw;
+		padding: 1rem;
+		gap: 1rem;
+	}
+}

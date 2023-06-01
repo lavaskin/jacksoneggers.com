@@ -1,0 +1,26 @@
+.info {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.recent-experience {
+	position: relative;
+}
+
+app-exerience-item {
+	padding-bottom: 1rem;
+}
+
+.tagline {
+	position: absolute;
+	top: -0.25rem;
+	right: -0.25rem;
+	padding: 0.25rem 0.5rem;
+}
+.extra {
+	position: absolute;
+	bottom: -0.25rem;
+	right: -0.25rem;
+	padding: 0.25rem 0.5rem;
+}

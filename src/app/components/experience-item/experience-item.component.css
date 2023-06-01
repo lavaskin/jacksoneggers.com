@@ -1,0 +1,29 @@
+.head {
+	display: flex;
+	align-items: center;
+	gap: 0.25rem;
+}
+
+.head p:first-child {
+	font-weight: 700;
+	font-size: 1.3rem;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.chips {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+	.head {
+		flex-direction: column;
+		align-items: flex-start;
+	}	
+}

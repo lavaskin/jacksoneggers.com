@@ -1,0 +1,17 @@
+<div class="wrapper container">
+
+	<div class="head">
+		<p *ngIf="experience.link"><a [href]="experience.link" target="_blank">{{ experience.place }}</a></p>
+		<p *ngIf="!experience.link">{{ experience.place }}</p>
+		<p>({{ experience.position }})</p>
+	</div>
+
+	<p class="timeline"><i class="fas fa-calendar"></i> {{ experience.start }} - {{ experience.end}}</p>
+
+	<p class=desc>{{ experience.description }}</p>
+
+	<div class="chips">
+		<app-chip *ngFor="let s of experience.skills" [text]="s" ></app-chip>
+	</div>
+
+</div>

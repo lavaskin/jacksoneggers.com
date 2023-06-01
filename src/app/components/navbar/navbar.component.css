@@ -1,0 +1,46 @@
+nav {
+	display: flex;
+	justify-content: center;
+	padding-top: 1rem;
+	padding-bottom: 0.25rem;
+	transition: 0.5s;
+	
+	position: sticky;
+	position: -webkit-sticky;
+	top: 0;
+}
+
+ul {
+	display: flex;
+	list-style: none;
+	gap: 2rem;
+}
+
+li {
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+	color: var(--color-text);
+	font-size: 1.25rem;
+}
+
+.active {
+	color: var(--color-accent);
+	text-decoration: underline var(--color-accent);
+}
+
+@media screen and (max-width: 768px) {
+	ul {
+		gap: 3rem;
+	}
+	
+	i {
+		font-size: 2rem;
+	}
+	
+	span {
+		display: none;
+	}
+}
