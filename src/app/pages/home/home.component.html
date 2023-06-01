@@ -1,0 +1,53 @@
+<div class="page">
+
+	<app-title-card></app-title-card>
+
+	<!-- Temporary looking for work advert -->
+	<section class="container info">
+		<h2><i class="fas fa-triangle-exclamation"></i> looking for work!</h2>
+
+		<p>
+			On May 26th, June 2023 I was laid off from my previous position as a software engineer for EtherForm Inc. due to a shortage of work. I was hired initially
+			to work on two contracts we were aiming for. We only won one contract, and that clients needs didn't match our expectations.
+		</p>
+
+		<p>
+			I am open to all kinds of roles from web development to embedded systems. I am also open to relocation, but I would prefer to stay in the beaverton area,
+			or better yet, to work remotely. I am also open to contract work, but would prefer a full-time position.
+		</p>
+
+		<p>
+			Please <a href="mailto:me@jacksoneggers.com">send me an email</a> if you have any questions or would like to talk about a position.
+		</p>
+	</section>
+
+	<section class="container info">
+		<h2>about me</h2>
+
+		<p>
+			i started out my programming passion in high school with a class in game development.
+			that interest lead me to getting a bachelors in applied computer science at <a href="https://oregonstate.edu" target="_blank">oregon state university</a> in 2021.
+			after graduating, i started working at a local company to grow my technical skills and learn more about the industry. you can see more about my experience <a routerLink="/experience">here</a>.
+		</p>
+
+		<p>
+			i enjoy starting up personl projects in my freetime relating to things that interest me or my friends, as well as 
+			learning new technologies and languages. i also enjoy playing video games, watching movies, and working on my cars.
+		</p>
+	</section>
+
+	<!-- Most Recent Professional Experience -->
+	<section class="recent-experience">
+		<app-experience-item [experience]="recentExperience"></app-experience-item>
+
+		<div class="tagline container"><i class="fas fa-clock"></i> recent experience</div>
+
+		<div class="extra container">
+			<a routerLink="/experience">see more <i class="fas fa-arrow-turn-down-right"></i></a>
+		</div>
+	</section>
+
+	<!-- Featured Project -->
+	<!-- ... -->
+
+</div>

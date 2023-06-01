@@ -1,0 +1,5 @@
+.app {
+	position: relative;
+	background-color: var(--color-bg);
+	min-height: 100dvh;
+}
