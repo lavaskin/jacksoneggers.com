@@ -24,9 +24,6 @@ export class ExperienceComponent implements OnInit {
 
 			// If not, set the active experience
 			this.highlightedExperience = parseInt(eid);
-			// And scroll to it
-			const element = document.getElementById(`e${eid}`);
-			if (element !== null) element.scrollIntoView({behavior: 'smooth'});
 		});
 	}
 

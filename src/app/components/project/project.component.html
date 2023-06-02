@@ -1,1 +1,9 @@
-<p>project...</p>
+<div class="container" [id]="'p'+project.id" [ngClass]="highlighted ? 'highlighted' : ''">
+
+	<h2>{{ project.title }}</h2>
+
+	<p>{{ project.description }}</p>
+
+	<i *ngIf="highlighted" class="fas fa-right"></i>
+
+</div>

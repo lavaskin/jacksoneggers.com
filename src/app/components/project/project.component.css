@@ -1,0 +1,24 @@
+.container {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.fa-right {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: -2rem;
+	font-size: 2rem;
+	text-align: center;
+	color: var(--color-accent-other);
+}
+
+@media screen and (max-width: 768px) {
+	.fa-right {
+		left: -0.25rem;
+		top: -0.5rem;
+		transform: rotate(45deg);
+	}
+}
