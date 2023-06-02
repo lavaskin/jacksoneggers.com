@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import Experience from 'src/app/models/experience.model';
+import projectsData from 'src/app/data/projects.data';
 
 @Component({
 	selector: 'app-experience-item',
@@ -25,4 +26,9 @@ export class ExperienceItemComponent implements OnInit {
 			if (element) element.scrollIntoView();
 		}
 	}
+
+	public getProjectNameFromID(id: number): string {
+		return projectsData.find(p => p.id === id)?.title ?? 'Unknown Project';
+	}
+
 }

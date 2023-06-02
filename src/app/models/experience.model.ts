@@ -8,6 +8,6 @@ export default interface Experience {
 	start: string,
 	end: string,
 
-	relevantProjets?: number[],
+	relevantProjects?: number[],
 	skills?: string[],
 }

@@ -20,6 +20,7 @@ const experiencesData: Experience[] = [
 		start: 'May 2022',
 		end: 'February 2023',
 		skills: ['Java', 'Android', 'Angular', 'Git', 'PHP', 'SQL', 'Flutter', 'Vue.js', 'Vuetify', 'UIKit', 'SwiftUI', 'Python'],
+		relevantProjects: [0, 1],
 	},
 	{
 		id: 2,
@@ -30,6 +31,7 @@ const experiencesData: Experience[] = [
 		start: 'November 2022',
 		end: 'February 2023',
 		skills: ['Nuxt3', 'Vue.js', 'Vuetify', 'Drogon'],
+		relevantProjects: [4],
 	},
 	{
 		id: 3,
@@ -40,6 +42,7 @@ const experiencesData: Experience[] = [
 		start: 'February 2022',
 		end: 'May 2023',
 		skills: ['C++', 'Nuxt3', 'Vue.js', 'Vuetify', 'Drogon', 'AFSIM', 'Git', 'Linux'],
+		relevantProjects: [4],
 	},
 ];
 

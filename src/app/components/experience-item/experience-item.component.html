@@ -10,6 +10,17 @@
 
 	<p class=desc>{{ experience.description }}</p>
 
+	<!-- Relevant Projects Links (Only show on experiences tab) -->
+	<div class="projects" *ngIf="experience.relevantProjects && !extraLink">
+		<span><i class="fas fa-folder"></i> Relevant Projects: </span>
+		<a *ngFor="let id of experience.relevantProjects; let idx=index"
+			[routerLink]="'/projects/'+id"
+			tabindex="0">
+			{{ getProjectNameFromID(id) }}
+			<span *ngIf="idx !== experience.relevantProjects.length - 1">, </span>
+		</a>
+	</div>
+
 	<!-- Skill Chips -->
 	<div class="chips">
 		<app-chip *ngFor="let s of experience.skills" [text]="s" ></app-chip>

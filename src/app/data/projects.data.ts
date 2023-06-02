@@ -23,12 +23,12 @@ const projectsData: Project[] = [
 			},
 			{
 				title: 'appletv',
-				href: 'https://apps.apple.com/us/app/catholictv/id323243305',
+				href: 'https://apps.apple.com/us/app/catholictv/id323243305?platform=appleTV',
 				icon: 'fab fa-apple',
 			}
 		],
 		skills: ['angular', 'typescript', 'tizen', 'java', 'android', 'swift', 'uikit', 'aws', 'php', 'c#', '.net'],
-		relevantExperience: 2,
+		relevantExperience: 1,
 	},
 	{
 		id: 1,
@@ -47,7 +47,7 @@ const projectsData: Project[] = [
 			}
 		],
 		skills: ['Vue.js', 'Vuetify', 'javascript', 'css', 'html', 'AWS', '.NET', 'Git', 'Jira', 'Agile', 'Kinesis'],
-		relevantExperience: 2,
+		relevantExperience: 1,
 	},
 	{
 		id: 2,
@@ -88,10 +88,10 @@ const projectsData: Project[] = [
 	{
 		id: 4,
 		title: 'Cranny GUI',
-		description: "Nuxt3 GUI frontend for the channel reactor platform monitor software. Took in data through the channel reactor rest api to use in various live graphs and tables. classified software, so no screenshots or links.",
+		description: "Nuxt3 GUI frontend for the channel reactor platform monitoring software. Takes in data through the channel reactor rest api to use in various live graphs and tables. classified software, so no screenshots or links.",
 		skills: ['vue3', 'nuxt3', 'javascript', 'css', 'html', 'drogon'],
-		relevantExperience: 3,
+		relevantExperience: 2,
 	},
 ];
 
-export default projectsData;
+export default projectsData.reverse();
