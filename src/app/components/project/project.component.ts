@@ -9,8 +9,20 @@ import Project from 'src/app/models/project.model';
 export class ProjectComponent implements OnInit {
 	@Input()
 	public project!: Project;
+	@Input()
+	public highlighted: boolean = false;
+	@Input()
+	public extraLink?: string;
 	
 	constructor() { }
 
 	ngOnInit(): void { }
+
+	ngAfterViewInit(): void {
+		// Scroll to the element if it is highlighted
+		if (this.highlighted) {	
+			const element = document.getElementById(`p${this.project.id}`);
+			if (element) element.scrollIntoView();
+		}
+	}
 }

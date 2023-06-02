@@ -1,7 +1,7 @@
-<div class="wrapper container">
+<div class="container" [id]="'e'+experience.id" [ngClass]="highlighted ? 'highlighted' : ''">
 
 	<div class="head">
-		<p *ngIf="experience.link"><a [href]="experience.link" target="_blank">{{ experience.place }}</a></p>
+		<p *ngIf="experience.link"><a [href]="experience.link" target="_blank" tabindex="0">{{ experience.place }}</a></p>
 		<p *ngIf="!experience.link">{{ experience.place }}</p>
 		<p>({{ experience.position }})</p>
 	</div>
@@ -10,8 +10,29 @@
 
 	<p class=desc>{{ experience.description }}</p>
 
+	<!-- Relevant Projects Links (Only show on experiences tab) -->
+	<div class="projects" *ngIf="experience.relevantProjects.length > 0 && !extraLink">
+		<span><i class="fas fa-folder"></i> Relevant Projects: </span>
+		<a *ngFor="let id of experience.relevantProjects; let idx=index"
+			[routerLink]="'/projects/'+id"
+			tabindex="0">
+			{{ getProjectNameFromID(id) }}
+			<span *ngIf="idx !== experience.relevantProjects.length - 1">, </span>
+		</a>
+	</div>
+
+	<!-- Skill Chips -->
 	<div class="chips">
 		<app-chip *ngFor="let s of experience.skills" [text]="s" ></app-chip>
 	</div>
+
+	<!-- Goto Experiences Button -->
+	<a *ngIf="extraLink" [routerLink]="extraLink" class="btn-wrapper">
+		<button class="btn">
+			see more <i class="fas fa-arrow-turn-down-right"></i>
+		</button>
+	</a>
+
+	<i *ngIf="highlighted" class="fas fa-right"></i>
 
 </div>

@@ -1,1 +1,37 @@
-<p>project...</p>
+<div class="container" [id]="'p'+project.id" [ngClass]="highlighted ? 'highlighted' : ''">
+
+	<h2>{{ project.title }}</h2>
+	<p>{{ project.description }}</p>
+
+	<!-- Links -->
+	<div class="horz-list" *ngIf="project.links">
+		<a *ngFor="let l of project.links" [href]="l.href" target="_blank" tabindex="0">
+			<i *ngIf="l.icon" [ngClass]="l.icon"></i> {{ l.title }}
+		</a>
+	</div>
+
+	<!-- Skill Chips -->
+	<div class="horz-list">
+		<app-chip *ngFor="let s of project.skills" [text]="s" ></app-chip>
+	</div>
+
+	<!-- Relevant Experience Button -->
+	<a *ngIf="!extraLink && project.relevantExperience !== undefined"
+		[routerLink]="'/experience/' + project.relevantExperience"
+		class="btn-wrapper">
+		<button class="btn">
+			relevant experience <i class="fas fa-arrow-turn-down-right"></i>
+		</button>
+	</a>
+
+	<!-- Goto projects button -->
+	<a *ngIf="extraLink" [routerLink]="extraLink" class="btn-wrapper">
+		<button class="btn">
+			see more <i class="fas fa-arrow-turn-down-right"></i>
+		</button>
+	</a>
+
+	<!-- Highlighted Arrow-->
+	<i *ngIf="highlighted" class="fas fa-right"></i>
+
+</div>

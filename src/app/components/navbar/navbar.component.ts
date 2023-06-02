@@ -12,15 +12,19 @@ export class NavbarComponent implements OnInit {
 	constructor() { }
 
 	ngOnInit(): void {
+		const navbar = document.getElementsByTagName('nav')[0];
+
 		// Hook up scroll listener to change navbar styling
 		window.addEventListener('scroll', () => {
 			if (window.scrollY > 10) {
-				this.color = 'var(--color-fg)';
-				this.border = '0.25rem solid var(--color-accent)';
+				navbar.classList.add('scrolled');
 			} else {
-				this.color = 'transparent';
-				this.border = 'none';
+				navbar.classList.remove('scrolled');
 			}
 		});
+	}
+
+	public scrollToTop(): void {
+		window.scrollTo({ top: 0 });
 	}
 }

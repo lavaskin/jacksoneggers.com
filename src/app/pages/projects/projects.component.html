@@ -1,5 +1,9 @@
 <div class="page">
 
-	<h1>projects</h1>
+	<h1>Projects</h1>
+
+	<app-project *ngFor="let p of projects"
+		[project]="p"
+		[highlighted]="highlightedProject === p.id"></app-project>
 
 </div>

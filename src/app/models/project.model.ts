@@ -5,9 +5,9 @@ export default interface Project {
 	
 	title: string,
 	description: string,
-	links: Link[],
-	images: string[],
+	links?: Link[],
+	images?: string[],
 	skills: string[],
 
-	relevantExperiences: number[],
+	relevantExperience?: number,
 }
