@@ -11,7 +11,7 @@
 	<p class=desc>{{ experience.description }}</p>
 
 	<!-- Relevant Projects Links (Only show on experiences tab) -->
-	<div class="projects" *ngIf="experience.relevantProjects && !extraLink">
+	<div class="projects" *ngIf="experience.relevantProjects.length > 0 && !extraLink">
 		<span><i class="fas fa-folder"></i> Relevant Projects: </span>
 		<a *ngFor="let id of experience.relevantProjects; let idx=index"
 			[routerLink]="'/projects/'+id"
@@ -27,9 +27,11 @@
 	</div>
 
 	<!-- Goto Experiences Button -->
-	<button *ngIf="extraLink" class="btn" [routerLink]="extraLink">
-		see more <i class="fas fa-arrow-turn-down-right"></i>
-	</button>
+	<a *ngIf="extraLink" [routerLink]="extraLink" class="btn-wrapper">
+		<button class="btn">
+			see more <i class="fas fa-arrow-turn-down-right"></i>
+		</button>
+	</a>
 
 	<i *ngIf="highlighted" class="fas fa-right"></i>
 

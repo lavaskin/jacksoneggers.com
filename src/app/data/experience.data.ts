@@ -1,4 +1,5 @@
 import Experience from '../models/experience.model';
+import projectsData from './projects.data';
 
 const experiencesData: Experience[] = [
 	{
@@ -10,6 +11,7 @@ const experiencesData: Experience[] = [
 		start: 'September 2017',
 		end: 'December 2021',
 		skills: ['Java', 'C++', 'Git', 'Python', 'SQL', 'ML/AI', 'Haskell', 'Algorithms'],
+		relevantProjects: [],
 	},
 	{
 		id: 1,
@@ -20,7 +22,7 @@ const experiencesData: Experience[] = [
 		start: 'May 2022',
 		end: 'February 2023',
 		skills: ['Java', 'Android', 'Angular', 'Git', 'PHP', 'SQL', 'Flutter', 'Vue.js', 'Vuetify', 'UIKit', 'SwiftUI', 'Python'],
-		relevantProjects: [0, 1],
+		relevantProjects: [],
 	},
 	{
 		id: 2,
@@ -31,7 +33,7 @@ const experiencesData: Experience[] = [
 		start: 'November 2022',
 		end: 'February 2023',
 		skills: ['Nuxt3', 'Vue.js', 'Vuetify', 'Drogon'],
-		relevantProjects: [4],
+		relevantProjects: [],
 	},
 	{
 		id: 3,
@@ -42,8 +44,15 @@ const experiencesData: Experience[] = [
 		start: 'February 2022',
 		end: 'May 2023',
 		skills: ['C++', 'Nuxt3', 'Vue.js', 'Vuetify', 'Drogon', 'AFSIM', 'Git', 'Linux'],
-		relevantProjects: [4],
+		relevantProjects: [],
 	},
 ];
+
+// Add relevantProjects to each experience based on if it is listed in a project
+experiencesData.forEach(e => {
+	projectsData.forEach(p => {
+		if (p.relevantExperience === e.id) e.relevantProjects.push(p.id);
+	});
+});
 
 export default experiencesData.reverse();

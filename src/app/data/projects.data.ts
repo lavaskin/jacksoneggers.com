@@ -1,10 +1,33 @@
 import Project from "../models/project.model";
 
+// The ID's are constants, but the actual ordering of the data is not
+// CURRENT TOP ID: 7
 const projectsData: Project[] = [
+	{
+		id: 5,
+		title: 'League Lookup',
+		description: "Mobile Android application that queries the League of Legends API for character information and formats it into a recyclerview list that can be filtered, sorted and interacted with. Data is stored in local storage and the API is queried every boot to check if the local database needs to be updated.",
+		links: [
+			{
+				title: 'github',
+				href: 'https://github.com/lavaskin/League-Lookup',
+				icon: 'fab fa-github',
+			},
+		],
+		skills: ['java', 'android', 'retrofit', 'gson', 'git'],
+		relevantExperience: 0,
+	},
+	{
+		id: 6,
+		title: 'Draw and Play',
+		description: "Leader of the project. Unity based mobile game for Android devices where users take a picture of a maze they drew, the game converts the image to game objects, and then the user can navigate through said maze. Android Studio needed to write a camera/photo gallery plugin. Everything else built with Unity for Android devices.",
+		skills: ['unity', 'c#', 'java', 'android', 'git'],
+		relevantExperience: 0,
+	},
 	{
 		id: 0,
 		title: 'CatholicTV',
-		description: "Series of TV applications, the ones I helped develop including AndroidTV/FireTV, AppleTV and SamsungTV. I also worked on the website using a C# backend which builds static HTML and serves it from AWS. Head developer on the whole CatholicTV project.",
+		description: "Series of TV applications, the ones I helped develop including AndroidTV/FireTV, AppleTV and SamsungTV. I also worked on the website using a C# backend which builds static HTML and serves it from AWS. Head developer on the whole CatholicTV project. Both the SamsungTV and AppleTV apps I had to build from scratch, which let me learn how to develop with Tizen and SwiftUI/UIKit.",
 		links: [
 			{
 				title: 'website',
@@ -27,7 +50,7 @@ const projectsData: Project[] = [
 				icon: 'fab fa-apple',
 			}
 		],
-		skills: ['angular', 'typescript', 'tizen', 'java', 'android', 'swift', 'uikit', 'aws', 'php', 'c#', '.net'],
+		skills: ['angular', 'typescript', 'tizen', 'java', 'android', 'swift', 'uikit', 'aws', 'php', 'c#', '.net', 'git'],
 		relevantExperience: 1,
 		images: [
 			'assets/pictures/ctv/0.webp',
@@ -38,7 +61,7 @@ const projectsData: Project[] = [
 	{
 		id: 1,
 		title: 'Slidermetrix',
-		description: "Online dial testing application for Dialsmith. I worked primarily on the Vue port of the frontend with minor .NET backend fixes when needed. Enterprise marketed web application with complex features such as realtime data polling, live video Q&A, and tons of admuin tools for setting up projects and tests. Sadly, there is no easy way of me getting screenshots of this software.",
+		description: "Online dial testing application for Dialsmith. I worked primarily on the Vue port of the frontend with minor .NET backend fixes when needed. Enterprise marketed web application with complex features such as realtime data polling, live video Q&A, and tons of admin tools for setting up projects and tests.",
 		links: [
 			{
 				title: 'dialsmith',
@@ -52,6 +75,13 @@ const projectsData: Project[] = [
 			}
 		],
 		skills: ['Vue.js', 'Vuetify', 'javascript', 'css', 'html', 'AWS', '.NET', 'Git', 'Jira', 'Agile', 'Kinesis'],
+		relevantExperience: 1,
+	},
+	{
+		id: 7,
+		title: 'Stanford Health Tracking App',
+		description: "Cross-platform health watching app where users (or patient providers) can log daily information and keep on top of data. I was tasked with the actual tracking page where users input their various data points (heart rate, weight, steps, etc) and then see them graphed in different ways with notifications for streaks. I also worked on the overall structure of the app, the .NET backend and admin interface in Angular.",
+		skills: ['flutter', 'dart', 'isar', 'angular', '.net', 'c#', 'git'],
 		relevantExperience: 1,
 	},
 	{
