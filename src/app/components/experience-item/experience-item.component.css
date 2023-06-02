@@ -30,7 +30,8 @@
 
 .fa-right {
 	position: absolute;
-	top: 40%;
+	top: 50%;
+	transform: translateY(-50%);
 	left: -2rem;
 	font-size: 2rem;
 	text-align: center;
