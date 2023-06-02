@@ -3,6 +3,7 @@
 	margin: 0;
 	box-sizing: border-box;
 	font-family: 'Poppins', sans-serif;
+	scroll-margin-top: 4.75rem;
 
 	/* Color variables */
 	--color-text-dark: #151515;
