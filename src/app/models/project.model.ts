@@ -9,5 +9,5 @@ export default interface Project {
 	images?: string[],
 	skills: string[],
 
-	relevantExperiences: number[],
+	relevantExperience?: number,
 }

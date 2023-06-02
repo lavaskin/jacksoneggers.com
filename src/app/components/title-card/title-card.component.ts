@@ -21,7 +21,7 @@ export class TitleCardComponent implements OnInit {
 		{
 			href: 'https://docs.google.com/document/d/1P4fcC_aMRjLTD9NOmFajZOYWZbAOfX4qoVpqgkVrmg8/edit?usp=sharing',
 			title: 'resume',
-			icon: 'fas fa-file'
+			icon: 'fas fa-file-pdf'
 		}
 	];
 	public contacts: Link[] = [

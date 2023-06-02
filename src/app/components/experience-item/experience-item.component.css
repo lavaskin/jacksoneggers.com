@@ -28,6 +28,13 @@
 	gap: 0.5rem;
 }
 
+.extra {
+	display: flex;
+	width: max-content;
+	margin-left: auto;
+	padding: 0.25rem 0.5rem;
+}
+
 .fa-right {
 	position: absolute;
 	top: 50%;

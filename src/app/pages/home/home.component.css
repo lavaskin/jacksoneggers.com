@@ -4,19 +4,20 @@
 	gap: 1rem;
 }
 
-.recent-experience {
+.shoutout-box {
 	position: relative;
 }
 
 .tagline {
 	position: absolute;
-	top: -0.25rem;
-	right: -0.25rem;
+	top: -1rem;
+	right: -0.75rem;
 	padding: 0.25rem 0.5rem;
 }
-.extra {
-	position: absolute;
-	bottom: -0.25rem;
-	right: -0.25rem;
-	padding: 0.25rem 0.5rem;
+
+@media screen and (max-width: 768px) {
+	.tagline {
+		top: -0.5rem;
+		right: -0.5rem;
+	}
 }

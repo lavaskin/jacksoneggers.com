@@ -14,6 +14,12 @@
 		<app-chip *ngFor="let s of experience.skills" [text]="s" ></app-chip>
 	</div>
 
+	<div class="extra container" *ngIf="extraLink">
+		<a [routerLink]="extraLink" tabindex="0">
+			see more <i class="fas fa-arrow-turn-down-right"></i>
+		</a>
+	</div>
+
 	<i *ngIf="highlighted" class="fas fa-right"></i>
 
 </div>

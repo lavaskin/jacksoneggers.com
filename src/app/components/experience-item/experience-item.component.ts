@@ -11,14 +11,10 @@ export class ExperienceItemComponent implements OnInit {
 	public experience!: Experience;
 	@Input()
 	public highlighted: boolean = false;
+	@Input()
+	public extraLink?: string;
 	
 	constructor() { }
 
-	ngOnInit(): void {
-		// focus on the element if it is highlighted
-		if (this.highlighted) {
-			const element = document.getElementById(`e${this.experience.id}`);
-			if (element !== null) element.scrollIntoView({behavior: 'smooth'});
-		}
-	}
+	ngOnInit(): void { }
 }

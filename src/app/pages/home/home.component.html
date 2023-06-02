@@ -4,7 +4,7 @@
 
 	<!-- Temporary looking for work advert -->
 	<section class="container info">
-		<h2><i class="fas fa-triangle-exclamation"></i> looking for work!</h2>
+		<h2><i class="fas fa-triangle-exclamation" style="color: yellow"></i> looking for work!</h2>
 
 		<p>
 			On May 26th of 2023, I was laid off from my previous position as a software engineer for EtherForm Inc. due to a shortage of work. I was hired initially
@@ -13,7 +13,7 @@
 
 		<p>
 			I am open to all kinds of roles from web development to embedded systems. I am also open to relocation, but I would prefer to stay in the beaverton area,
-			or better yet, to work remotely. I am also open to contract work, but would prefer a full-time position.
+			or better yet, work remotely. I am also open to contract work, but would prefer a full-time position.
 		</p>
 
 		<p>
@@ -37,17 +37,17 @@
 	</section>
 
 	<!-- Most Recent Professional Experience -->
-	<section class="recent-experience">
-		<app-experience-item [experience]="recentExperience"></app-experience-item>
+	<section class="shoutout-box">
+		<app-experience-item [experience]="recentExperience" [extraLink]="'/experience/' + recentExperience.id"></app-experience-item>
 
 		<div class="tagline container"><i class="fas fa-clock"></i> recent work</div>
-
-		<div class="extra container">
-			<a [routerLink]="'/experience/' + recentExperience.id" tabindex="0">see more <i class="fas fa-arrow-turn-down-right"></i></a>
-		</div>
 	</section>
 
 	<!-- Featured Project -->
-	<!-- ... -->
+	<section class="shoutout-box">
+		<app-project [project]="featuredProject" [extraLink]="'/projects/' + featuredProject.id"></app-project>
+
+		<div class="tagline container"><i class="fas fa-star"></i> featured project</div>
+	</section>
 
 </div>

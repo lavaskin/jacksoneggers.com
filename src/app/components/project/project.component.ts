@@ -11,6 +11,8 @@ export class ProjectComponent implements OnInit {
 	public project!: Project;
 	@Input()
 	public highlighted: boolean = false;
+	@Input()
+	public extraLink?: string;
 	
 	constructor() { }
 
