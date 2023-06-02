@@ -10,7 +10,7 @@
 		</a>
 	</div>
 
-	<!-- Skills -->
+	<!-- Skill Chips -->
 	<div class="horz-list">
 		<app-chip *ngFor="let s of project.skills" [text]="s" ></app-chip>
 	</div>
@@ -23,11 +23,9 @@
 	</div>
 
 	<!-- Goto projects button -->
-	<div class="extra container" *ngIf="extraLink">
-		<a [routerLink]="extraLink" tabindex="0">
-			see more <i class="fas fa-arrow-turn-down-right"></i>
-		</a>
-	</div>
+	<button *ngIf="extraLink" class="btn" [routerLink]="extraLink">
+		see more <i class="fas fa-arrow-turn-down-right"></i>
+	</button>
 
 	<!-- Highlighted Arrow-->
 	<i *ngIf="highlighted" class="fas fa-right"></i>

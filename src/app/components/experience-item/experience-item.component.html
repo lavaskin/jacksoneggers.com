@@ -10,15 +10,15 @@
 
 	<p class=desc>{{ experience.description }}</p>
 
+	<!-- Skill Chips -->
 	<div class="chips">
 		<app-chip *ngFor="let s of experience.skills" [text]="s" ></app-chip>
 	</div>
 
-	<div class="extra container" *ngIf="extraLink">
-		<a [routerLink]="extraLink" tabindex="0">
-			see more <i class="fas fa-arrow-turn-down-right"></i>
-		</a>
-	</div>
+	<!-- Goto Experiences Button -->
+	<button *ngIf="extraLink" class="btn" [routerLink]="extraLink">
+		see more <i class="fas fa-arrow-turn-down-right"></i>
+	</button>
 
 	<i *ngIf="highlighted" class="fas fa-right"></i>
 
