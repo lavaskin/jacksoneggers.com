@@ -11,7 +11,7 @@ import Project from 'src/app/models/project.model';
 })
 export class HomeComponent implements OnInit {
 	public recentExperience: Experience = experienceData[0];
-	public featuredProject: Project = projectsData[0];
+	public featuredProject: Project = projectsData[4];
 	
 	constructor() { }
 

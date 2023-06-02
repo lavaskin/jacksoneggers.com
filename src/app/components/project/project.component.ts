@@ -17,4 +17,12 @@ export class ProjectComponent implements OnInit {
 	constructor() { }
 
 	ngOnInit(): void { }
+
+	ngAfterViewInit(): void {
+		// Scroll to the element if it is highlighted
+		if (this.highlighted) {	
+			const element = document.getElementById(`p${this.project.id}`);
+			if (element) element.scrollIntoView();
+		}
+	}
 }

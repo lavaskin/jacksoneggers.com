@@ -16,11 +16,11 @@
 	</div>
 
 	<!-- Relevant Experience Button -->
-	<div class="extra container" *ngIf="!extraLink && project.relevantExperience">
-		<a [routerLink]="'/experience/' + project.relevantExperience" tabindex="0">
-			relevant experience <i class="fas fa-arrow-turn-down-right"></i>
-		</a>
-	</div>
+	<button *ngIf="!extraLink && project.relevantExperience"
+		class="btn"
+		[routerLink]="'/experience/' + project.relevantExperience">
+		relevant experience <i class="fas fa-arrow-turn-down-right"></i>
+	</button>
 
 	<!-- Goto projects button -->
 	<button *ngIf="extraLink" class="btn" [routerLink]="extraLink">

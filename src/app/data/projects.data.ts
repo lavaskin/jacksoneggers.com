@@ -2,7 +2,7 @@ import Project from "../models/project.model";
 
 const projectsData: Project[] = [
 	{
-		id: 1,
+		id: 0,
 		title: 'CatholicTV',
 		description: "Series of TV applications, the ones I helped develop including AndroidTV/FireTV, AppleTV and SamsungTV. I also worked on the website using a C# backend which builds static HTML and serves it from AWS. Head developer on the whole CatholicTV project.",
 		links: [
@@ -31,7 +31,7 @@ const projectsData: Project[] = [
 		relevantExperience: 2,
 	},
 	{
-		id: 2,
+		id: 1,
 		title: 'Slidermetrix',
 		description: "Online dial testing application for Dialsmith. I worked primarily on the Vue port of the frontend with minor .NET backend fixes when needed. Enterprise marketed web application with complex features such as realtime data polling, live video Q&A, and tons of admuin tools for setting up projects and tests. Sadly, there is no easy way of me getting screenshots of this software.",
 		links: [
@@ -50,7 +50,7 @@ const projectsData: Project[] = [
 		relevantExperience: 2,
 	},
 	{
-		id: 3,
+		id: 2,
 		title: 'Slimes! Discord Bot',
 		description: "Discord bot built with discord.py. Features a custom image splicing and generation so that users can create unique slimes to trade and collect. Website built in Angular with a Firebase backend for hosting and data providing so that users can more easily view their collections.",
 		links: [
@@ -73,7 +73,7 @@ const projectsData: Project[] = [
 		skills: ['discord.py', 'python', 'pillow', 'angular', 'firestore', 'firebase', 'git'],
 	},
 	{
-		id: 4,
+		id: 3,
 		title: 'guapish.com',
 		description: "Angular website for a smaller podcast using typescript data files to store data and firebase hosting for hosting. Features advanced sorting and filtering features with a modern UI.",
 		links: [
@@ -86,7 +86,7 @@ const projectsData: Project[] = [
 		skills: ['angular', 'typescript', 'firebase', 'html', 'css', 'git'],
 	},
 	{
-		id: 5,
+		id: 4,
 		title: 'Cranny GUI',
 		description: "Nuxt3 GUI frontend for the channel reactor platform monitor software. Took in data through the channel reactor rest api to use in various live graphs and tables. classified software, so no screenshots or links.",
 		skills: ['vue3', 'nuxt3', 'drogon'],

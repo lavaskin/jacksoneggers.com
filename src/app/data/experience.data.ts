@@ -2,7 +2,7 @@ import Experience from '../models/experience.model';
 
 const experiencesData: Experience[] = [
 	{
-		id: 1,
+		id: 0,
 		link: 'https://oregonstate.edu/',
 		place: 'Oregon State University',
 		position: 'Undergraduate Student',
@@ -12,7 +12,7 @@ const experiencesData: Experience[] = [
 		skills: ['Java', 'C++', 'Git', 'Python', 'SQL', 'ML/AI', 'Haskell', 'Algorithms'],
 	},
 	{
-		id: 2,
+		id: 1,
 		link: 'https://buildableworks.com/',
 		place: 'Buildable',
 		position: 'Software Engineer',
@@ -22,7 +22,7 @@ const experiencesData: Experience[] = [
 		skills: ['Java', 'Android', 'Angular', 'Git', 'PHP', 'SQL', 'Flutter', 'Vue.js', 'Vuetify', 'UIKit', 'SwiftUI', 'Python'],
 	},
 	{
-		id: 3,
+		id: 2,
 		link: 'https://etherform.com',
 		place: 'EtherForm Inc.',
 		position: 'Software Engineering Contractor',
@@ -32,7 +32,7 @@ const experiencesData: Experience[] = [
 		skills: ['Nuxt3', 'Vue.js', 'Vuetify', 'Drogon'],
 	},
 	{
-		id: 4,
+		id: 3,
 		link: 'https://etherform.com',
 		place: 'EtherForm Inc.',
 		position: 'Software Engineer',
