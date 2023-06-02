@@ -46,7 +46,7 @@ const projectsData: Project[] = [
 				icon: 'fas fa-file-pdf',
 			}
 		],
-		skills: ['Vue.js', 'Vuetify', 'AWS', '.NET', 'Git', 'Jira', 'Agile', 'Kinesis'],
+		skills: ['Vue.js', 'Vuetify', 'javascript', 'css', 'html', 'AWS', '.NET', 'Git', 'Jira', 'Agile', 'Kinesis'],
 		relevantExperience: 2,
 	},
 	{
@@ -89,7 +89,7 @@ const projectsData: Project[] = [
 		id: 4,
 		title: 'Cranny GUI',
 		description: "Nuxt3 GUI frontend for the channel reactor platform monitor software. Took in data through the channel reactor rest api to use in various live graphs and tables. classified software, so no screenshots or links.",
-		skills: ['vue3', 'nuxt3', 'drogon'],
+		skills: ['vue3', 'nuxt3', 'javascript', 'css', 'html', 'drogon'],
 		relevantExperience: 3,
 	},
 ];
