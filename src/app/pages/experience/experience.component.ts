@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import experiencesData from 'src/app/data/experience.data';
 
 @Component({
@@ -8,8 +9,28 @@ import experiencesData from 'src/app/data/experience.data';
 })
 export class ExperienceComponent implements OnInit {
 	public experiences = experiencesData;
-	
-	constructor() { }
 
-	ngOnInit(): void { }
+	private eidSubscribtion: any;
+	public highlightedExperience?: number;
+	
+	constructor(private route: ActivatedRoute) { }
+
+	ngOnInit(): void {
+		// Grab the id from the url
+		this.eidSubscribtion = this.route.paramMap.subscribe(params => {
+			const eid = params.get('id');
+			
+			if (eid === null || isNaN(parseInt(eid))) return;
+
+			// If not, set the active experience
+			this.highlightedExperience = parseInt(eid);
+			// And scroll to it
+			const element = document.getElementById(`e${eid}`);
+			if (element !== null) element.scrollIntoView({behavior: 'smooth'});
+		});
+	}
+
+	ngOnDestroy(): void {
+		this.eidSubscribtion.unsubscribe();
+	}
 }

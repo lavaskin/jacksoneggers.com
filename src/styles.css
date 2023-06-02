@@ -10,6 +10,8 @@
 	--color-accent: #4381C1;
 	--color-fg: #98c1d9;
 	--color-bg: #e0fbfc;
+	--color-accent-other: #ca3535;
+	--color-fg-other: #c78989;
 
 	text-transform: lowercase;
 }
@@ -72,4 +74,9 @@ a:hover {
 		padding: 1rem;
 		gap: 1rem;
 	}
+}
+
+.highlighted {
+	background-color: var(--color-fg-other);
+	border: 0.25rem solid var(--color-accent-other)
 }

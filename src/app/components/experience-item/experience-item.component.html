@@ -1,4 +1,4 @@
-<div class="wrapper container">
+<div class="container" [id]="'e'+experience.id" [ngClass]="highlighted ? 'highlighted' : ''">
 
 	<div class="head">
 		<p *ngIf="experience.link"><a [href]="experience.link" target="_blank">{{ experience.place }}</a></p>
@@ -13,5 +13,7 @@
 	<div class="chips">
 		<app-chip *ngFor="let s of experience.skills" [text]="s" ></app-chip>
 	</div>
+
+	<i *ngIf="highlighted" class="fas fa-right"></i>
 
 </div>

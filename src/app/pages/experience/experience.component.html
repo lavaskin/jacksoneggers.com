@@ -2,6 +2,8 @@
 
 	<h1>Experience</h1>
 
-	<app-experience-item *ngFor="let e of experiences" [experience]="e"></app-experience-item>
+	<app-experience-item *ngFor="let e of experiences"
+		[experience]="e"
+		[highlighted]="highlightedExperience === e.id"></app-experience-item>
 
 </div>

@@ -9,6 +9,8 @@ import Experience from 'src/app/models/experience.model';
 export class ExperienceItemComponent implements OnInit {
 	@Input() 
 	public experience!: Experience;
+	@Input()
+	public highlighted: boolean = false;
 	
 	constructor() { }
 
