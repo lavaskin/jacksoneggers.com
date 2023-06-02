@@ -29,6 +29,11 @@ const projectsData: Project[] = [
 		],
 		skills: ['angular', 'typescript', 'tizen', 'java', 'android', 'swift', 'uikit', 'aws', 'php', 'c#', '.net'],
 		relevantExperience: 1,
+		images: [
+			'assets/pictures/ctv/0.webp',
+			'assets/pictures/ctv/1.webp',
+			'assets/pictures/ctv/2.webp',
+		],
 	},
 	{
 		id: 1,
@@ -84,6 +89,12 @@ const projectsData: Project[] = [
 			},
 		],
 		skills: ['angular', 'typescript', 'firebase', 'html', 'css', 'git'],
+		images: [
+			'assets/pictures/guapish/0.webp',
+			'assets/pictures/guapish/1.webp',
+			'assets/pictures/guapish/2.webp',
+			'assets/pictures/guapish/3.webp',
+		],
 	},
 	{
 		id: 4,
