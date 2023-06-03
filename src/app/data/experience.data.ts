@@ -32,7 +32,7 @@ const experiencesData: Experience[] = [
 		description: "Contracting position where I worked on the GUI frontend of a platform monitoring project. Built the interface in Vue3 using Nuxt3 and Vuetify for styling. Consumed a REST API built in Drogon and deployed on independant linux machines.",
 		start: 'November 2022',
 		end: 'February 2023',
-		skills: ['Nuxt3', 'Vue.js', 'Vuetify', 'Drogon'],
+		skills: ['nuxt3', 'vue.js', 'vuetify', 'drogon'],
 		relevantProjects: [],
 	},
 	{
@@ -40,10 +40,10 @@ const experiencesData: Experience[] = [
 		link: 'https://etherform.com',
 		place: 'EtherForm Inc.',
 		position: 'Software Engineer',
-		description: "General software engineer for defense contracting startup mostly focusing on internal tooling and AFSIM integration research. Wrote the companies Sensor Resource Manager as well as continued work on the GUI frontend of a platform monitoring project.",
+		description: "General software engineer for defense contracting startup mostly focusing on internal tooling and AFSIM integration research. Wrote the company's Sensor Resource Manager as well as continued work on the GUI frontend of a platform monitoring project.",
 		start: 'February 2022',
 		end: 'May 2023',
-		skills: ['C++', 'Nuxt3', 'Vue.js', 'Vuetify', 'Drogon', 'AFSIM', 'Git', 'Linux'],
+		skills: ['c++', 'nuxt3', 'vue.js', 'vuetify', 'drogon', 'afsim', 'git', 'linux'],
 		relevantProjects: [],
 	},
 ];
