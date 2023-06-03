@@ -64,7 +64,7 @@ const projectsData: Project[] = [
 		description: "Online dial testing application for Dialsmith. I worked primarily on the Vue port of the frontend with minor .NET backend fixes when needed. Enterprise marketed web application with complex features such as realtime data polling, live video Q&A, and tons of admin tools for setting up projects and tests.",
 		links: [
 			{
-				title: 'dialsmith',
+				title: 'website',
 				href: 'https://dialsmith.com/',
 				icon: 'fas fa-globe',
 			},
@@ -110,13 +110,18 @@ const projectsData: Project[] = [
 	{
 		id: 3,
 		title: 'guapish.com',
-		description: "Angular website for a smaller podcast using typescript data files to store data and firebase hosting for hosting. Features advanced sorting and filtering features with a modern UI.",
+		description: "Angular website for a smaller podcast using typescript data files to store data and firebase for hosting. Features advanced sorting and filtering features with a modern UI. Updated weekly as new episodes are released.",
 		links: [
 			{
-				title: 'guapish.com',
+				title: 'website',
 				href: 'https://guapish.com/',
 				icon: 'fas fa-globe',
 			},
+			{
+				title: 'github',
+				href: 'https://github.com/lavaskin/guapish.com',
+				icon: 'fab fa-github',
+			}
 		],
 		skills: ['angular', 'typescript', 'firebase', 'html', 'css', 'git'],
 		images: [
