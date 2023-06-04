@@ -11,6 +11,26 @@
 	gap: 0.5rem;
 }
 
+.images {
+	flex-wrap: nowrap;
+	overflow-x: auto;
+}
+
+.images img {
+	height: 10rem;
+}
+
+/* Remove scrollbar */
+.images::-webkit-scrollbar {
+	height: 0
+}
+
+.dialog-img {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+
 .btn-wrapper {
 	margin-left: auto;
 }
@@ -26,6 +46,10 @@
 }
 
 @media screen and (max-width: 768px) {
+	.images img {
+		height: 7.5rem;
+	}
+	
 	.fa-right {
 		left: -0.25rem;
 		top: -0.5rem;

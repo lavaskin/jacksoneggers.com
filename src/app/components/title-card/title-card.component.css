@@ -13,11 +13,6 @@
 	margin: 1rem 0;
 }
 
-.head img {
-	border-radius: 0.5rem;
-	border: 0.25rem solid var(--color-accent);
-}
-
 .head__right {
 	display: flex;
 	flex-direction: column;

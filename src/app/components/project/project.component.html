@@ -12,7 +12,16 @@
 
 	<!-- Skill Chips -->
 	<div class="horz-list">
-		<app-chip *ngFor="let s of project.skills" [text]="s" ></app-chip>
+		<app-chip *ngFor="let s of project.skills"
+			[color]="highlighted ? 'var(--color-accent-other)' : 'var(--color-accent)'"
+			[text]="s"></app-chip>
+	</div>
+
+	<!-- Images List -->
+	<div class="horz-list images">
+		<img *ngFor="let i of project.images"
+			[src]="i" [alt]="project.title"
+			(click)="modalImage = i; showModal = true" />
 	</div>
 
 	<!-- Relevant Experience Button -->
@@ -35,3 +44,8 @@
 	<i *ngIf="highlighted" class="fas fa-right"></i>
 
 </div>
+
+<!-- Image Popup Modal -->
+<app-modal [title]="project.title" [(show)]="showModal">
+	<img class="dialog-img" [src]="modalImage" [alt]="project.title" />
+</app-modal>

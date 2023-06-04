@@ -1,12 +1,12 @@
 import Project from "../models/project.model";
 
 // The ID's are constants, but the actual ordering of the data is not
-// CURRENT TOP ID: 7
+// CURRENT TOP ID: 8
 const projectsData: Project[] = [
 	{
 		id: 5,
 		title: 'League Lookup',
-		description: "Mobile Android application that queries the League of Legends API for character information and formats it into a recyclerview list that can be filtered, sorted and interacted with. Data is stored in local storage and the API is queried every boot to check if the local database needs to be updated.",
+		description: "Mobile Android application that queries the League of Legends API for character information and formats it into a recyclerview list that can be filtered, sorted and interacted with. Data is stored in local storage and the API is queried every boot to check if the local database needs to be updated. Made with a team of 4 for a Mobile Development course.",
 		links: [
 			{
 				title: 'github',
@@ -27,7 +27,7 @@ const projectsData: Project[] = [
 	{
 		id: 0,
 		title: 'CatholicTV',
-		description: "Series of TV applications, the ones I helped develop including AndroidTV/FireTV, AppleTV and SamsungTV. I also worked on the website using a C# backend which builds static HTML and serves it from AWS. Head developer on the whole CatholicTV project. Both the SamsungTV and AppleTV apps I had to build from scratch, which let me learn how to develop with Tizen and SwiftUI/UIKit.",
+		description: "Series of TV applications; the ones I helped develop being AndroidTV/FireTV, AppleTV and SamsungTV. I also worked on the website using a C# backend which builds static HTML and serves it from AWS. Head developer on the whole CatholicTV project. I built both the SamsungTV and AppleTV apps from scratch, which let me learn how to develop with Tizen and SwiftUI/UIKit respectively.",
 		links: [
 			{
 				title: 'website',
@@ -64,7 +64,7 @@ const projectsData: Project[] = [
 		description: "Online dial testing application for Dialsmith. I worked primarily on the Vue port of the frontend with minor .NET backend fixes when needed. Enterprise marketed web application with complex features such as realtime data polling, live video Q&A, and tons of admin tools for setting up projects and tests.",
 		links: [
 			{
-				title: 'dialsmith',
+				title: 'website',
 				href: 'https://dialsmith.com/',
 				icon: 'fas fa-globe',
 			},
@@ -87,7 +87,7 @@ const projectsData: Project[] = [
 	{
 		id: 2,
 		title: 'Slimes! Discord Bot',
-		description: "Discord bot built with discord.py. Features a custom image splicing and generation so that users can create unique slimes to trade and collect. Website built in Angular with a Firebase backend for hosting and data providing so that users can more easily view their collections.",
+		description: "Discord bot built with discord.py and Pillow. Features a custom image splicing and generation so that users can create unique slimes to trade and collect. Website built in Angular with a Firebase backend for hosting and data providing so that users can more easily view their collections.",
 		links: [
 			{
 				title: 'website',
@@ -110,13 +110,18 @@ const projectsData: Project[] = [
 	{
 		id: 3,
 		title: 'guapish.com',
-		description: "Angular website for a smaller podcast using typescript data files to store data and firebase hosting for hosting. Features advanced sorting and filtering features with a modern UI.",
+		description: "Angular website for a smaller podcast using typescript data files to store data and firebase for hosting. Features advanced sorting and filtering features with a modern UI. Updated weekly as new episodes are released.",
 		links: [
 			{
-				title: 'guapish.com',
+				title: 'website',
 				href: 'https://guapish.com/',
 				icon: 'fas fa-globe',
 			},
+			{
+				title: 'github',
+				href: 'https://github.com/lavaskin/guapish.com',
+				icon: 'fab fa-github',
+			}
 		],
 		skills: ['angular', 'typescript', 'firebase', 'html', 'css', 'git'],
 		images: [
@@ -133,6 +138,24 @@ const projectsData: Project[] = [
 		skills: ['vue3', 'nuxt3', 'javascript', 'css', 'html', 'drogon'],
 		relevantExperience: 2,
 	},
+	{
+		id: 8,
+		title: 'jacksoneggers.com',
+		description: "The site you're currently viewing! Built with Angular with no fancy libraries, hosted with Firebase hosting. Simple portfolio website that consumes basic typescript data files to showcase my projects and experience.",
+		links: [
+			{
+				title: 'github',
+				href: 'https://github.com/lavaskin/jacksoneggers.com',
+				icon: 'fab fa-github',
+			},
+			{
+				title: 'if you really need it',
+				href: '/home',
+				icon: 'fas fa-home',
+			}
+		],
+		skills: ['angular', 'typescript', 'firebase', 'html', 'css', 'git'],
+	}
 ];
 
 export default projectsData.reverse();

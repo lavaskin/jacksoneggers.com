@@ -23,7 +23,9 @@
 
 	<!-- Skill Chips -->
 	<div class="chips">
-		<app-chip *ngFor="let s of experience.skills" [text]="s" ></app-chip>
+		<app-chip *ngFor="let s of experience.skills"
+			[color]="highlighted ? 'var(--color-accent-other)' : 'var(--color-accent)'"	
+			[text]="s" ></app-chip>
 	</div>
 
 	<!-- Goto Experiences Button -->
