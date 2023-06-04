@@ -100,3 +100,6 @@ a:hover {
 	border: 0.25rem solid var(--color-accent-other);
 	color: var(--color-accent-other);
 }
+.highlighted img {
+	border: 0.25rem solid var(--color-accent-other);
+}
