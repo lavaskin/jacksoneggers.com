@@ -12,7 +12,9 @@
 
 	<!-- Skill Chips -->
 	<div class="horz-list">
-		<app-chip *ngFor="let s of project.skills" [text]="s" ></app-chip>
+		<app-chip *ngFor="let s of project.skills"
+			[text]="s"
+			[color]="highlighted ? 'var(--color-accent-other)' : 'var(--color-accent)'"></app-chip>
 	</div>
 
 	<!-- Relevant Experience Button -->
