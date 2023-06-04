@@ -55,6 +55,7 @@
 @media screen and (max-width: 768px) {
 	.modal-body {
 		width: 95%;
+		padding: 0.5rem;
 	}
 	.title {
 		font-size: 1.25rem;

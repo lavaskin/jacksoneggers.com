@@ -19,9 +19,9 @@
 
 	<!-- Images List -->
 	<div class="horz-list images">
-		<img *ngFor="let i of project.images"
+		<img *ngFor="let i of project.images; let idx = index"
 			[src]="i" [alt]="project.title"
-			(click)="modalImage = i; showModal = true" />
+			(click)="modalImage = idx; showModal = true" />
 	</div>
 
 	<!-- Relevant Experience Button -->
@@ -41,11 +41,22 @@
 	</a>
 
 	<!-- Highlighted Arrow-->
-	<i *ngIf="highlighted" class="fas fa-right"></i>
+	<i *ngIf="highlighted" class="fas fa-right highlight-arrow"></i>
 
 </div>
 
 <!-- Image Popup Modal -->
-<app-modal [title]="project.title" [(show)]="showModal">
-	<img class="dialog-img" [src]="modalImage" [alt]="project.title" />
+<app-modal [title]="project.title" [(show)]="showModal" *ngIf="project.images">
+	
+	<div class="modal-body">
+		<img [src]="project.images[modalImage]" [alt]="project.title" />
+		
+		<!-- Action Buttons -->
+		<button class="left" (click)="lastImage()">
+			<i class="fas fa-left"></i>
+		</button>
+		<button class="right" (click)="nextImage()">
+			<i class="fas fa-right"></i>
+		</button>
+	</div>
 </app-modal>
