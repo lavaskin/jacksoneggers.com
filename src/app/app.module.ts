@@ -11,6 +11,7 @@ import { TitleCardComponent } from './components/title-card/title-card.component
 import { ProjectComponent } from './components/project/project.component';
 import { ExperienceItemComponent } from './components/experience-item/experience-item.component';
 import { ChipComponent } from './components/chip/chip.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 @NgModule({
 	declarations: [
@@ -22,7 +23,8 @@ import { ChipComponent } from './components/chip/chip.component';
 		TitleCardComponent,
 		ProjectComponent,
 		ExperienceItemComponent,
-  ChipComponent
+  ChipComponent,
+  ModalComponent
 	],
 	imports: [
 		BrowserModule,

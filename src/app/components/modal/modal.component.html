@@ -1,0 +1,17 @@
+<div (click)="close($event)"
+	*ngIf="show"
+	class="modal-background"
+	#background>
+
+	<div class="modal-body">
+		<div class="modal-header">
+			<p class="title">{{title}}</p>
+			<button class="close" (click)="close()">
+				<i class="fas fa-times"></i>
+			</button>
+		</div>
+
+		<ng-content></ng-content>
+	</div>
+
+</div>

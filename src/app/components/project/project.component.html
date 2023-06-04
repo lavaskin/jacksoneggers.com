@@ -17,6 +17,13 @@
 			[text]="s"></app-chip>
 	</div>
 
+	<!-- Images List -->
+	<div class="horz-list images">
+		<img *ngFor="let i of project.images"
+			[src]="i" [alt]="project.title"
+			(click)="modalImage = i; showModal = true" />
+	</div>
+
 	<!-- Relevant Experience Button -->
 	<a *ngIf="!extraLink && project.relevantExperience !== undefined"
 		[routerLink]="'/experience/' + project.relevantExperience"
@@ -37,3 +44,8 @@
 	<i *ngIf="highlighted" class="fas fa-right"></i>
 
 </div>
+
+<!-- Image Popup Modal -->
+<app-modal [title]="project.title" [(show)]="showModal">
+	<img class="dialog-img" [src]="modalImage" [alt]="project.title" />
+</app-modal>

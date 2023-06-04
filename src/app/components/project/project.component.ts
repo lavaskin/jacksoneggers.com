@@ -13,6 +13,9 @@ export class ProjectComponent implements OnInit {
 	public highlighted: boolean = false;
 	@Input()
 	public extraLink?: string;
+
+	public showModal: boolean = false;
+	public modalImage: string = '';
 	
 	constructor() { }
 
