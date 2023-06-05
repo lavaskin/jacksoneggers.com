@@ -19,6 +19,9 @@
 .images img {
 	height: 10rem;
 }
+.images img:hover {
+	cursor: pointer;
+}
 
 /* Remove scrollbar */
 .images::-webkit-scrollbar {

@@ -16,6 +16,9 @@ const projectsData: Project[] = [
 		],
 		skills: ['java', 'android', 'retrofit', 'gson', 'git'],
 		relevantExperience: 0,
+		images: [
+			'assets/pictures/league/0.webp',
+		],
 	},
 	{
 		id: 6,
@@ -27,7 +30,10 @@ const projectsData: Project[] = [
 	{
 		id: 0,
 		title: 'CatholicTV',
-		description: "Series of TV applications; the ones I helped develop being AndroidTV/FireTV, AppleTV and SamsungTV. I also worked on the website using a C# backend which builds static HTML and serves it from AWS. Head developer on the whole CatholicTV project. I built both the SamsungTV and AppleTV apps from scratch, which let me learn how to develop with Tizen and SwiftUI/UIKit respectively.",
+		description: `
+			CatholicTV is a Catholic TV network used my millions of users monthly, with a series of TV apps and a streaming website. 
+			I was the primary developer and maintainer for their products at Buildable, writing both the AppleTV and SamsungTV apps from scratch, as well as maintaining the Android/FireTV app and the website.
+		`,
 		links: [
 			{
 				title: 'website',
@@ -55,7 +61,6 @@ const projectsData: Project[] = [
 		images: [
 			'assets/pictures/ctv/0.webp',
 			'assets/pictures/ctv/1.webp',
-			'assets/pictures/ctv/2.webp',
 		],
 	},
 	{
