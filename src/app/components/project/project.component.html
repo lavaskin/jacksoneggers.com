@@ -52,10 +52,10 @@
 		<img [src]="project.images[modalImage]" [alt]="project.title" tabindex="0" />
 		
 		<!-- Action Buttons -->
-		<button class="left" (click)="lastImage()">
+		<button class="left" (click)="lastImage()" *ngIf="project.images.length > 1">
 			<i class="fas fa-left"></i>
 		</button>
-		<button class="right" (click)="nextImage()">
+		<button class="right" (click)="nextImage()" *ngIf="project.images.length > 1">
 			<i class="fas fa-right"></i>
 		</button>
 	</div>
