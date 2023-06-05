@@ -111,6 +111,12 @@ const projectsData: Project[] = [
 			}
 		],
 		skills: ['discord.py', 'python', 'pillow', 'angular', 'firestore', 'firebase', 'git'],
+		relevantExperience: 4,
+		images: [
+			'assets/pictures/slimes/0.webp',
+			'assets/pictures/slimes/1.webp',
+			'assets/pictures/slimes/2.webp',
+		],
 	},
 	{
 		id: 3,
@@ -136,6 +142,7 @@ const projectsData: Project[] = [
 			'assets/pictures/guapish/3.webp',
 			'assets/pictures/guapish/4.webp',
 		],
+		relevantExperience: 4,
 	},
 	{
 		id: 4,
@@ -161,6 +168,7 @@ const projectsData: Project[] = [
 			}
 		],
 		skills: ['angular', 'typescript', 'firebase', 'html', 'css', 'git'],
+		relevantExperience: 4,
 	}
 ];
 
