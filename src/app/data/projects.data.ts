@@ -134,6 +134,7 @@ const projectsData: Project[] = [
 			'assets/pictures/guapish/1.webp',
 			'assets/pictures/guapish/2.webp',
 			'assets/pictures/guapish/3.webp',
+			'assets/pictures/guapish/4.webp',
 		],
 	},
 	{
