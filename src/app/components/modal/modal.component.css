@@ -11,7 +11,7 @@
 
 .modal-body {
 	padding: 1rem;
-	width: 90%;
+	width: 70%;
 
 	position: absolute;
 	top: 50%;
@@ -52,6 +52,16 @@
 	color: var(--accent-1);
 }
 
+@media screen and (max-width: 1400px) {
+	.modal-body {
+		width: 80%;
+	}
+}
+@media screen and (max-width: 1200px) {
+	.modal-body {
+		width: 90%;
+	}
+}
 @media screen and (max-width: 768px) {
 	.modal-body {
 		width: 95%;
