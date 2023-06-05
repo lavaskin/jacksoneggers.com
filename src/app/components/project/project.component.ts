@@ -15,7 +15,7 @@ export class ProjectComponent implements OnInit {
 	public extraLink?: string;
 
 	public showModal: boolean = false;
-	public modalImage: string = '';
+	public modalImage: number = 0; // Index of the image to show in the modal
 	
 	constructor() { }
 
@@ -27,5 +27,12 @@ export class ProjectComponent implements OnInit {
 			const element = document.getElementById(`p${this.project.id}`);
 			if (element) element.scrollIntoView();
 		}
+	}
+
+	lastImage(): void {
+		this.modalImage = this.modalImage === 0 ? this.project.images!.length - 1 : this.modalImage - 1;
+	}
+	nextImage(): void {
+		this.modalImage = this.modalImage === this.project.images!.length - 1 ? 0 : this.modalImage + 1;
 	}
 }

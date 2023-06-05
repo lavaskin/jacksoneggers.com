@@ -1,6 +1,8 @@
 import Experience from '../models/experience.model';
 import projectsData from './projects.data';
 
+// The ID's are constants, but the actual ordering of the data is not
+// CURRENT TOP ID: 4
 const experiencesData: Experience[] = [
 	{
 		id: 0,
@@ -22,6 +24,16 @@ const experiencesData: Experience[] = [
 		start: 'May 2022',
 		end: 'February 2023',
 		skills: ['Java', 'Android', 'Angular', 'Git', 'PHP', 'SQL', 'Flutter', 'Vue.js', 'Vuetify', 'UIKit', 'SwiftUI', 'Python'],
+		relevantProjects: [],
+	},
+	{
+		id: 4,
+		place: 'Freelance Web Development',
+		position: 'Web Developer',
+		description: "Independent website development contracting and freelance work. Main stack is Angular for the frontend and Firebase for the backend and hosting. Mostly independent projects, but have taken some contracting positions as well like with EtherForm Inc. and a local catering business.",
+		start: 'May 2022',
+		end: 'Present',
+		skills: ['angular', 'typescript', 'firebase', 'html', 'css', 'git'],
 		relevantProjects: [],
 	},
 	{
