@@ -6,7 +6,11 @@ const projectsData: Project[] = [
 	{
 		id: 5,
 		title: 'League Lookup',
-		description: "Mobile Android application that queries the League of Legends API for character information and formats it into a recyclerview list that can be filtered, sorted and interacted with. Data is stored in local storage and the API is queried every boot to check if the local database needs to be updated. Made with a team of 4 for a Mobile Development course.",
+		description: `
+			Mobile Android application that queries the League of Legends API for character information and formats it into a recyclerview list that can be filtered, 
+			sorted and interacted with. Data is stored in local storage and the API is queried every boot to check if the local database needs to be updated.
+			Made with a team of 4 for a Mobile Development course.
+		`,
 		links: [
 			{
 				title: 'github',
@@ -23,7 +27,10 @@ const projectsData: Project[] = [
 	{
 		id: 6,
 		title: 'Draw and Play',
-		description: "Leader of the project. Unity based mobile game for Android devices where users take a picture of a maze they drew, the game converts the image to game objects, and then the user can navigate through said maze. Android Studio needed to write a camera/photo gallery plugin. Everything else built with Unity for Android devices.",
+		description: `
+			Leader of the project. Unity based mobile game for Android devices where users take a picture of a maze they drew, 
+			the game converts the image to game objects, and then the user can navigate through said maze. Android Studio needed to write a camera/photo gallery plugin. Everything else built with Unity for Android devices.
+		`,
 		skills: ['unity', 'c#', 'java', 'android', 'git'],
 		relevantExperience: 0,
 	},
@@ -31,7 +38,7 @@ const projectsData: Project[] = [
 		id: 0,
 		title: 'CatholicTV',
 		description: `
-			CatholicTV is a Catholic TV network used my millions of users monthly, with a series of TV apps and a streaming website. 
+			CatholicTV is a Catholic TV network used by millions of users monthly, with a series of TV apps and a streaming website. 
 			I was the primary developer and maintainer for their products at Buildable, writing both the AppleTV and SamsungTV apps from scratch, as well as maintaining the Android/FireTV app and the website.
 		`,
 		links: [
@@ -66,7 +73,10 @@ const projectsData: Project[] = [
 	{
 		id: 1,
 		title: 'Slidermetrix',
-		description: "Online dial testing application for Dialsmith. I worked primarily on the Vue port of the frontend with minor .NET backend fixes when needed. Enterprise marketed web application with complex features such as realtime data polling, live video Q&A, and tons of admin tools for setting up projects and tests.",
+		description: `
+			Online dial testing application for Dialsmith. I worked primarily on the Vue port of the frontend with minor .NET backend fixes when needed. 
+			Enterprise marketed web application with complex features such as real-time data polling, live video Q&A, and tons of admin tools for setting up projects and tests.
+		`,
 		links: [
 			{
 				title: 'website',
@@ -85,7 +95,11 @@ const projectsData: Project[] = [
 	{
 		id: 7,
 		title: 'Stanford Health Tracking App',
-		description: "Cross-platform health watching app where users (or patient providers) can log daily information and keep on top of data. I was tasked with the actual tracking page where users input their various data points (heart rate, weight, steps, etc) and then see them graphed in different ways with notifications for streaks. I also worked on the overall structure of the app, the .NET backend and admin interface in Angular.",
+		description: `
+			Cross-platform health watching app where users (or patient providers) can log daily information and keep on top of data. 
+			I was tasked with the actual tracking page where users input their various data points (heart rate, weight, steps, etc) and then see them graphed in different ways with notifications for streaks. 
+			I also worked on the overall structure of the app, the .NET backend and admin interface in Angular.
+		`,
 		skills: ['flutter', 'dart', 'isar', 'angular', '.net', 'c#', 'git'],
 		relevantExperience: 1,
 	},
@@ -121,7 +135,10 @@ const projectsData: Project[] = [
 	{
 		id: 3,
 		title: 'guapish.com',
-		description: "Angular website for a smaller podcast using typescript data files to store data and firebase for hosting. Features advanced sorting and filtering features with a modern UI. Updated weekly as new episodes are released.",
+		description: `
+			Angular website for a smaller podcast using typescript data files to store data and firebase for hosting. Features advanced sorting and filtering features with a modern UI. 
+			Updated weekly as new episodes are released.
+		`,
 		links: [
 			{
 				title: 'website',
@@ -147,25 +164,26 @@ const projectsData: Project[] = [
 	{
 		id: 4,
 		title: 'Cranny GUI',
-		description: "Nuxt3 GUI frontend for the channel reactor platform monitoring software. Takes in data through the channel reactor rest api to use in various live graphs and tables. classified software, so no screenshots or links.",
+		description: `
+			Nuxt3 GUI frontend for the channel reactor platform monitoring software. Takes in data through the channel reactor rest api to use in various live graphs and tables. 
+			Classified software, so no screenshots or links.
+		`,
 		skills: ['vue3', 'nuxt3', 'javascript', 'css', 'html', 'drogon'],
 		relevantExperience: 2,
 	},
 	{
 		id: 8,
 		title: 'jacksoneggers.com',
-		description: "The site you're currently viewing! Built with Angular with no fancy libraries, hosted with Firebase hosting. Simple portfolio website that consumes basic typescript data files to showcase my projects and experience.",
+		description: `
+			Built with pure Angular; hosted with Firebase hosting. Simple portfolio website that consumes static typescript data files to showcase my projects and experience, as well as link to various relevant socials. 
+			Automatic deploys on push to master through Github actions.
+		`,
 		links: [
 			{
 				title: 'github',
 				href: 'https://github.com/lavaskin/jacksoneggers.com',
 				icon: 'fab fa-github',
 			},
-			{
-				title: 'if you really need it',
-				href: '/home',
-				icon: 'fas fa-home',
-			}
 		],
 		skills: ['angular', 'typescript', 'firebase', 'html', 'css', 'git'],
 		relevantExperience: 4,
