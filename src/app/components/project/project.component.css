@@ -73,19 +73,17 @@
 	color: var(--color-accent-other);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (width < 768px) {
 	.images img {
 		height: 7.5rem;
 	}
 
-	.modal-body button {
-		font-size: 1.75rem;
-	}
+	/* Remove buttons on mobile */
 	.modal-body button.right {
-		right: 0.5rem;
+		display: none;
 	}
 	.modal-body button.left {
-		left: 0.5rem;
+		display: none;
 	}
 	
 	.highlight-arrow {
