@@ -19,7 +19,7 @@ export class TitleCardComponent implements OnInit {
 			icon: 'fab fa-linkedin'
 		},
 		{
-			href: 'https://docs.google.com/document/d/1P4fcC_aMRjLTD9NOmFajZOYWZbAOfX4qoVpqgkVrmg8/edit?usp=sharing',
+			href: 'https://drive.google.com/file/d/1JYL7xTK5GUYn78gC30syDKXYLrhmGIyP/view?usp=sharing',
 			title: 'resume',
 			icon: 'fas fa-file-pdf'
 		}
