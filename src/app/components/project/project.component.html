@@ -21,7 +21,8 @@
 	<div class="horz-list images">
 		<img *ngFor="let i of project.images; let idx = index"
 			[src]="i" [alt]="project.title"
-			(click)="modalImage = idx; showModal = true" />
+			(click)="modalImage = idx; showModal = true"
+			tabindex="0" />
 	</div>
 
 	<!-- Relevant Experience Button -->
@@ -49,7 +50,10 @@
 <app-modal [title]="project.title" [(show)]="showModal" *ngIf="project.images">
 	
 	<div class="modal-body">
-		<img [src]="project.images[modalImage]" [alt]="project.title" tabindex="0" />
+		<img [src]="project.images[modalImage]" 
+			[alt]="project.title" 
+			(click)="nextImage()"
+			tabindex="0" />
 		
 		<!-- Action Buttons -->
 		<button class="left" (click)="lastImage()" *ngIf="project.images.length > 1">
