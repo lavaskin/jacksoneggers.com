@@ -5,12 +5,11 @@
 	font-family: 'Poppins', sans-serif;
 
 	/* Color variables */
-	--color-text-dark: #151515;
-	--color-text-light: #f0f0f0;
+	--color-text: #f0f0f0;
 	--color-accent: #4381C1;
-	--color-fg: #181818;
-	--color-bg: #212121;
 	--color-accent-other: #ca3535;
+	--color-bg: #212121;
+	--color-fg: #161616;
 	--color-fg-other: #c78989;
 }
 
@@ -28,7 +27,7 @@ a:hover {
 }
 
 h1 {
-	color: var(--color-text-light);
+	color: var(--color-text);
 }
 
 .btn {
@@ -48,7 +47,7 @@ h1 {
 /* Main content container style */
 .container {
 	background: var(--color-fg);
-	color: var(--color-text-light);
+	color: var(--color-text);
 	padding: 1rem;
 	scroll-margin-top: 4.75rem;
 	box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.5);
