@@ -1,16 +1,16 @@
 section {
 	opacity: 0;
-	transform: translateY(-20px); /* Move the sections up initially */
-	transform-origin: top; /* Set the transform origin to the bottom */
 }
 
 .slide-fade-in {
+	position: relative; /* Needed for top: -20px */
+	top: -20px; /* Move element 20px down to start slide position */
 	animation: fadeIn 0.5s ease-in-out forwards;
 }
 @keyframes fadeIn {
 	to {
-	  	opacity: 1;
-		transform: translateY(0); /* Move the sections back to their original position */
+		opacity: 1;
+	  	top: 0; /* Move element back to its original position */
 	}
 }
 
