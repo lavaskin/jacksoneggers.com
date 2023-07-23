@@ -43,6 +43,7 @@ section {
 		transform: translateY(0);
 	}
 	.slide-fade-in {
+		top: 0;
 		animation: none;
 	}
 }
