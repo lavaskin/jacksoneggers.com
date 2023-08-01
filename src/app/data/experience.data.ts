@@ -21,7 +21,7 @@ const experiencesData: Experience[] = [
 		place: 'Buildable',
 		position: 'Software Engineer',
 		description: "General Software Engineer on a large variety of projects and technologies including, but not limited to: TV applications, websites and complex web applications. My main project was the TV application series for CatholicTV, as well as their website. I was also a primary developer on the webapp rewrite of Slidermetrics 'Dialsmith' project and played a smaller role on other projects like Stanfords health tracking app or 72Disciples community app.",
-		start: 'May 2022',
+		start: 'March 2022',
 		end: 'February 2023',
 		skills: ['Java', 'Android', 'Angular', 'Git', 'PHP', 'SQL', 'Flutter', 'Vue.js', 'Vuetify', 'UIKit', 'SwiftUI', 'Python'],
 		relevantProjects: [],
