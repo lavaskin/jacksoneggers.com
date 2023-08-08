@@ -60,7 +60,7 @@ const experiencesData: Experience[] = [
 			Wrote the company's Sensor Resource Manager as well as continued work on the GUI frontend of a platform monitoring project.
 		`,
 		start: 'February 2023',
-		end: 'May 2023',
+		end: 'Present',
 		skills: ['c++', 'nuxt3', 'vue.js', 'vuetify', 'drogon', 'afsim', 'git', 'linux'],
 		relevantProjects: [],
 	},
