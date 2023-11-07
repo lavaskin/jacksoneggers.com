@@ -1,6 +1,7 @@
 <div class="container" [id]="'e'+experience.id" [ngClass]="highlighted ? 'highlighted' : ''">
 
 	<div class="head">
+		<!-- <i *ngIf="experience.end === 'Present'" class="fas fa-briefcase"></i> -->
 		<p *ngIf="experience.link"><a [href]="experience.link" target="_blank" tabindex="0">{{ experience.place }}</a></p>
 		<p *ngIf="!experience.link">{{ experience.place }}</p>
 		<p>({{ experience.position }})</p>

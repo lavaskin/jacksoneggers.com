@@ -125,7 +125,7 @@ const projectsData: Project[] = [
 			}
 		],
 		skills: ['discord.py', 'python', 'pillow', 'angular', 'firestore', 'firebase', 'git'],
-		relevantExperience: 4,
+		relevantExperience: 2,
 		images: [
 			'assets/pictures/slimes/0.webp',
 			'assets/pictures/slimes/1.webp',
@@ -159,7 +159,7 @@ const projectsData: Project[] = [
 			'assets/pictures/guapish/3.webp',
 			'assets/pictures/guapish/4.webp',
 		],
-		relevantExperience: 4,
+		relevantExperience: 2,
 	},
 	{
 		id: 4,
@@ -169,7 +169,7 @@ const projectsData: Project[] = [
 			Classified software, so no screenshots or links.
 		`,
 		skills: ['vue3', 'nuxt3', 'javascript', 'css', 'html', 'drogon'],
-		relevantExperience: 2,
+		relevantExperience: 3,
 	},
 	{
 		id: 8,
@@ -186,7 +186,7 @@ const projectsData: Project[] = [
 			},
 		],
 		skills: ['angular', 'typescript', 'firebase', 'html', 'css', 'git'],
-		relevantExperience: 4,
+		relevantExperience: 2,
 	}
 ];
 

@@ -16,18 +16,7 @@ const experiencesData: Experience[] = [
 		relevantProjects: [],
 	},
 	{
-		id: 1,
-		link: 'https://buildableworks.com/',
-		place: 'Buildable',
-		position: 'Software Engineer',
-		description: "General Software Engineer on a large variety of projects and technologies including, but not limited to: TV applications, websites and complex web applications. My main project was the TV application series for CatholicTV, as well as their website. I was also a primary developer on the webapp rewrite of Slidermetrics 'Dialsmith' project and played a smaller role on other projects like Stanfords health tracking app or 72Disciples community app.",
-		start: 'March 2022',
-		end: 'February 2023',
-		skills: ['Java', 'Android', 'Angular', 'Git', 'PHP', 'SQL', 'Flutter', 'Vue.js', 'Vuetify', 'UIKit', 'SwiftUI', 'Python'],
-		relevantProjects: [],
-	},
-	{
-		id: 4,
+		id: 2,
 		place: 'Freelance Web Development',
 		position: 'Web Developer',
 		description: "Independent website development contracting and freelance work. Main stack is Angular for the frontend and Firebase for the backend and hosting. Mostly independent projects, but have taken some contracting positions as well like with EtherForm Inc. and a local catering business.",
@@ -37,31 +26,30 @@ const experiencesData: Experience[] = [
 		relevantProjects: [],
 	},
 	{
-		id: 2,
+		id: 3,
 		link: 'https://etherform.com',
 		place: 'EtherForm Inc.',
 		position: 'Software Engineering Contractor',
 		description: `
-			Contracting position where I worked on the GUI frontend of a platform monitoring project. Built the interface in Vue3 using Nuxt3 and Vuetify for styling. 
-			Consumed a REST API built in Drogon and deployed on independent linux machines.
-		`,
-		start: 'November 2022',
-		end: 'February 2023',
-		skills: ['nuxt3', 'vue.js', 'vuetify', 'drogon'],
-		relevantProjects: [],
-	},
-	{
-		id: 3,
-		link: 'https://etherform.com',
-		place: 'EtherForm Inc.',
-		position: 'Software Engineer',
-		description: `
 			General software engineer for defense contracting startup mostly focusing on internal tooling and AFSIM integration research. 
 			Wrote the company's Sensor Resource Manager as well as continued work on the GUI frontend of a platform monitoring project.
 		`,
-		start: 'February 2023',
-		end: 'Present',
+		start: 'November 2022',
+		end: 'September 2023',
 		skills: ['c++', 'nuxt3', 'vue.js', 'vuetify', 'drogon', 'afsim', 'git', 'linux'],
+		relevantProjects: [],
+	},
+
+	// At the top because current
+	{
+		id: 1,
+		link: 'https://buildableworks.com/',
+		place: 'Buildable',
+		position: 'Software Engineer',
+		description: "General Software Engineer on a large variety of projects and technologies including, but not limited to: TV applications, websites and complex web applications. My main project was the TV application series for CatholicTV, as well as their website. I was also a primary developer on the webapp rewrite of Slidermetrics 'Dialsmith' project and played a smaller role on other projects like Stanfords health tracking app or 72Disciples community app.",
+		start: 'March 2022',
+		end: 'Present',
+		skills: ['Java', 'Android', 'Angular', 'Git', 'PHP', 'SQL', 'Flutter', 'Vue.js', 'Vuetify', 'UIKit', 'SwiftUI', 'Python'],
 		relevantProjects: [],
 	},
 ];
