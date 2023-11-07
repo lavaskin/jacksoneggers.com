@@ -10,7 +10,7 @@ import Project from 'src/app/models/project.model';
 	styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-	public recentExperience: Experience = experienceData[0];
+	public recentExperience: Experience = this.getFeaturedExperience(1);
 	public featuredProject: Project = this.getFeaturedProject(0);
 	
 	constructor() { }
@@ -40,5 +40,9 @@ export class HomeComponent implements OnInit {
 	private getFeaturedProject(id: number): Project {
 		const project = projectsData.find(project => project.id === id);
 		return project ? project : projectsData[0];
+	}
+	private getFeaturedExperience(id: number): Experience {
+		const experience = experienceData.find(experience => experience.id === id);
+		return experience ? experience : experienceData[0];
 	}
 }

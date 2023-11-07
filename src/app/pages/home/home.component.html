@@ -2,23 +2,6 @@
 
 	<app-title-card></app-title-card>
 
-	<!-- Temporary looking for work advert -->
-	<section class="container info">
-		<h2><i class="fas fa-triangle-exclamation" style="color: #ffd700;margin-right: 0.5rem;"></i> Looking for new Opportunities!</h2>
-
-		<p>
-			Looking for full-time positions relating to software development, specifically web development positions or general engineering. I am highly skilled with Angular but open to using or learning other frameworks as well as other technologies unrelated to web development.
-		</p>
-		
-		<p>
-			I am in the Portland, OR area and can work in-person, but I'm mostly looking for a fully remote position, or at a minimum, a hybrid position. I can also relocate if needed.
-		</p>
-		
-		<p>
-			Please <a href="mailto:me@jacksoneggers.com" tabindex="0">send me an email</a> if you have any questions or would like to discuss a relevant position.
-		</p>
-	</section>
-
 	<section class="container info">
 		<h2>About Me</h2>
 
@@ -38,14 +21,14 @@
 	<section class="shoutout-box">
 		<app-experience-item [experience]="recentExperience" [extraLink]="'/experience/' + recentExperience.id"></app-experience-item>
 
-		<div class="tagline container"><i class="fas fa-clock"></i> recent work</div>
+		<div class="tagline container"><i class="fas fa-clock"></i> Current Work</div>
 	</section>
 
 	<!-- Featured Project -->
 	<section class="shoutout-box">
 		<app-project [project]="featuredProject" [extraLink]="'/projects/' + featuredProject.id"></app-project>
 
-		<div class="tagline container"><i class="fas fa-star"></i> featured project</div>
+		<div class="tagline container"><i class="fas fa-star"></i> Featured Project</div>
 	</section>
 
 </div>
