@@ -29,20 +29,23 @@
 	<a *ngIf="!extraLink && project.relevantExperience !== undefined"
 		[routerLink]="'/experience/' + project.relevantExperience"
 		class="btn-wrapper">
+		
 		<button class="btn">
-			relevant experience <i class="fas fa-arrow-turn-down-right"></i>
+			relevant experience
+			<i class="fas fa-angle-right"></i>
 		</button>
 	</a>
 
 	<!-- Goto projects button -->
 	<a *ngIf="extraLink" [routerLink]="extraLink" class="btn-wrapper">
 		<button class="btn">
-			see more <i class="fas fa-arrow-turn-down-right"></i>
+			see more
+			<i class="fas fa-angle-right"></i>
 		</button>
 	</a>
 
 	<!-- Highlighted Arrow-->
-	<i *ngIf="highlighted" class="fas fa-right highlight-arrow"></i>
+	<i *ngIf="highlighted" class="highlight-point fas fa-right-long"></i>
 
 </div>
 
