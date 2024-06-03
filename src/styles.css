@@ -38,6 +38,9 @@ h1 {
 	font-size: 1rem;
 	color: var(--color-accent);
 	transition: 0.1s ease-in-out;
+	display: flex;
+	align-items: center;
+	gap: 0.3rem;
 }
 .btn:active {
 	transform: scale(0.95);
