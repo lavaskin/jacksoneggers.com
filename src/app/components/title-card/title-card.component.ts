@@ -19,10 +19,10 @@ export class TitleCardComponent implements OnInit {
 			icon: 'fab fa-linkedin'
 		},
 		{
-			href: 'https://drive.google.com/file/d/1xL8ZfQzfBMu6Lw7-3QmZqzMfLSw8YOGN/view?usp=sharing',
+			href: 'assets/resume.pdf',
 			title: 'resume',
 			icon: 'fas fa-file-pdf'
-		}
+		},
 	];
 	public contacts: Link[] = [
 		{
