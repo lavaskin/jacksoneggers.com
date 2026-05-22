@@ -1,0 +1,41 @@
+export enum SkillEnum {
+	// Languages
+	Java = 'Java',
+	Cpp = 'C++',
+	CSharp = 'C#',
+	Python = 'Python',
+	SQL = 'SQL',
+	JavaScript = 'JavaScript',
+	TypeScript = 'TypeScript',
+	HTML = 'HTML',
+	CSS = 'CSS',
+	PHP = 'PHP',
+	Haskell = 'Haskell',
+	Swift = 'Swift',
+
+	// Frameworks/Platforms
+	Angular = 'Angular',
+	Dotnet = '.NET',
+	Firebase = 'Firebase',
+	Android = 'Android',
+	Flutter = 'Flutter',
+	VueJS = 'Vue.js',
+	Vuetify = 'Vuetify',
+	Nuxt3 = 'Nuxt3',
+	Drogon = 'Drogon',
+	UIKit = 'UIKit',
+	SwiftUI = 'SwiftUI',
+	Unity = 'Unity',
+	Tizen = 'Tizen',
+
+	// Other
+	AI = 'AI',
+	ML = 'Machine Learning',
+	Git = 'Git',
+	AFSIM = 'AFSIM',
+	Linux = 'Linux',
+	Algorithms = 'Algorithms',
+	AWS = 'AWS',
+	Kubernetes = 'Kubernetes',
+	GRPC = 'gRPC',
+}

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import experienceData from 'src/app/data/experience.data';
 import projectsData from 'src/app/data/projects.data';
+import { ExperienceIdEnum } from 'src/app/models/enums/experience.enum';
+import { ProjectIdEnum } from 'src/app/models/enums/projects.enum';
 import Experience from 'src/app/models/experience.model';
 import Project from 'src/app/models/project.model';
 
@@ -10,8 +12,8 @@ import Project from 'src/app/models/project.model';
 	styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-	public recentExperience: Experience = this.getFeaturedExperience(1);
-	public featuredProject: Project = this.getFeaturedProject(0);
+	public recentExperience: Experience = this.getFeaturedExperience(ExperienceIdEnum.OfficeAlly);
+	public featuredProject: Project = this.getFeaturedProject(ProjectIdEnum.ServiceCenter);
 	
 	constructor() { }
 
@@ -37,11 +39,11 @@ export class HomeComponent implements OnInit {
 	}
 
 	// Finds a project by ID, if it doesn't exist, return the first project
-	private getFeaturedProject(id: number): Project {
+	private getFeaturedProject(id: ProjectIdEnum): Project {
 		const project = projectsData.find(project => project.id === id);
 		return project ? project : projectsData[0];
 	}
-	private getFeaturedExperience(id: number): Experience {
+	private getFeaturedExperience(id: ExperienceIdEnum): Experience {
 		const experience = experienceData.find(experience => experience.id === id);
 		return experience ? experience : experienceData[0];
 	}

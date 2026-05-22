@@ -1,5 +1,8 @@
+import { ExperienceIdEnum } from "./enums/experience.enum";
+import { SkillEnum } from "./enums/skills.enum";
+
 export default interface Experience {
-	id: number,
+	id: ExperienceIdEnum,
 	
 	link?: string,
 	place: string,
@@ -9,5 +12,5 @@ export default interface Experience {
 	end: string,
 
 	relevantProjects: number[], // populated in data file
-	skills?: string[],
+	skills?: SkillEnum[],
 }

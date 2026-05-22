@@ -1,10 +1,11 @@
+import { ExperienceIdEnum } from "../models/enums/experience.enum";
+import { ProjectIdEnum } from "../models/enums/projects.enum";
+import { SkillEnum } from "../models/enums/skills.enum";
 import Project from "../models/project.model";
 
-// The ID's are constants, but the actual ordering of the data is not
-// CURRENT TOP ID: 8
 const projectsData: Project[] = [
 	{
-		id: 5,
+		id: ProjectIdEnum.LeagueLookup,
 		title: 'League Lookup',
 		description: `
 			Mobile Android application that queries the League of Legends API for character information and formats it into a recyclerview list that can be filtered, 
@@ -18,24 +19,100 @@ const projectsData: Project[] = [
 				icon: 'fab fa-github',
 			},
 		],
-		skills: ['java', 'android', 'retrofit', 'gson', 'git'],
-		relevantExperience: 0,
+		skills: [ SkillEnum.Android, SkillEnum.Java, SkillEnum.Git ],
+		relevantExperience: ExperienceIdEnum.OSU,
 		images: [
 			'assets/pictures/league/0.webp',
 		],
 	},
 	{
-		id: 6,
+		id: ProjectIdEnum.DrawAndPlay,
 		title: 'Draw and Play',
 		description: `
 			Leader of the project. Unity based mobile game for Android devices where users take a picture of a maze they drew, 
-			the game converts the image to game objects, and then the user can navigate through said maze. Android Studio needed to write a camera/photo gallery plugin. Everything else built with Unity for Android devices.
+			the game converts the image to game objects, and then the user can navigate through said maze. Android Studio needed to write a camera/photo gallery plugin. 
+			Everything else built with Unity for Android devices.
 		`,
-		skills: ['unity', 'c#', 'java', 'android', 'git'],
-		relevantExperience: 0,
+		skills: [ SkillEnum.Unity, SkillEnum.CSharp, SkillEnum.Java, SkillEnum.Android ],
+		relevantExperience: ExperienceIdEnum.OSU,
 	},
 	{
-		id: 0,
+		id: ProjectIdEnum.Slimes,
+		title: 'Slimes! Discord Bot',
+		description: "Discord bot built with discord.py and Pillow. Features a custom image splicing and generation so that users can create unique slimes to trade and collect. Website built in Angular with a Firebase backend for hosting and data providing so that users can more easily view their collections.",
+		links: [
+			{
+				title: 'website',
+				href: 'https://slimes.lavask.in',
+				icon: 'fas fa-globe',
+			},
+			{
+				title: 'github',
+				href: 'https://github.com/lavaskin/slimes-bot',
+				icon: 'fab fa-github',
+			},
+			{
+				title: 'bot invite',
+				href: 'https://discord.com/api/oauth2/authorize?client_id=491793054894653452&permissions=8&scope=bot',
+				icon: 'fas fa-robot',
+			}
+		],
+		skills: [ SkillEnum.Python, SkillEnum.Angular, SkillEnum.Firebase ],
+		relevantExperience: ExperienceIdEnum.Freelance,
+		images: [
+			'assets/pictures/slimes/0.webp',
+			'assets/pictures/slimes/1.webp',
+			'assets/pictures/slimes/2.webp',
+		],
+	},
+	{
+		id: ProjectIdEnum.Guapish,
+		title: 'guapish.com',
+		description: `
+			Angular website for a smaller podcast using typescript data files to store data and firebase for hosting. Features advanced sorting and filtering features with a modern UI. 
+			Updated weekly as new episodes are released.
+		`,
+		links: [
+			{
+				title: 'website',
+				href: 'https://guapish.com/',
+				icon: 'fas fa-globe',
+			},
+			{
+				title: 'github',
+				href: 'https://github.com/lavaskin/guapish.com',
+				icon: 'fab fa-github',
+			}
+		],
+		skills: [ SkillEnum.Angular, SkillEnum.Firebase ],
+		images: [
+			'assets/pictures/guapish/0.webp',
+			'assets/pictures/guapish/1.webp',
+			'assets/pictures/guapish/2.webp',
+			'assets/pictures/guapish/3.webp',
+			'assets/pictures/guapish/4.webp',
+		],
+		relevantExperience: ExperienceIdEnum.Freelance,
+	},
+	{
+		id: ProjectIdEnum.ThisWebsite,
+		title: 'jacksoneggers.com',
+		description: `
+			Built with pure Angular; hosted with Firebase hosting. Simple portfolio website that consumes static typescript data files to showcase my projects and experience, as well as link to various relevant socials. 
+			Automatic deploys on push to master through Github actions.
+		`,
+		links: [
+			{
+				title: 'github',
+				href: 'https://github.com/lavaskin/jacksoneggers.com',
+				icon: 'fab fa-github',
+			},
+		],
+		skills: [ SkillEnum.Angular, SkillEnum.Firebase ],
+		relevantExperience: ExperienceIdEnum.Freelance,
+	},
+	{
+		id: ProjectIdEnum.CatholicTV,
 		title: 'CatholicTV',
 		description: `
 			CatholicTV is a Catholic TV network used by millions of users monthly, with a series of TV apps and a streaming website. 
@@ -63,15 +140,15 @@ const projectsData: Project[] = [
 				icon: 'fab fa-apple',
 			}
 		],
-		skills: ['angular', 'typescript', 'tizen', 'java', 'android', 'swift', 'uikit', 'aws', 'php', 'c#', '.net', 'git'],
-		relevantExperience: 1,
+		skills: [ SkillEnum.Angular, SkillEnum.Dotnet, SkillEnum.AWS, SkillEnum.SQL, SkillEnum.Tizen, SkillEnum.Android, SkillEnum.SwiftUI, SkillEnum.PHP ],
+		relevantExperience: ExperienceIdEnum.Buildable,
 		images: [
 			'assets/pictures/ctv/0.webp',
 			'assets/pictures/ctv/1.webp',
 		],
 	},
 	{
-		id: 1,
+		id: ProjectIdEnum.Slidermetrix,
 		title: 'Slidermetrix',
 		description: `
 			Online dial testing application for Dialsmith. I worked primarily on the Vue port of the frontend with minor .NET backend fixes when needed. 
@@ -89,104 +166,50 @@ const projectsData: Project[] = [
 				icon: 'fas fa-file-pdf',
 			}
 		],
-		skills: ['Vue.js', 'Vuetify', 'javascript', 'css', 'html', 'AWS', '.NET', 'Git', 'Jira', 'Agile', 'Kinesis'],
-		relevantExperience: 1,
+		skills: [ SkillEnum.VueJS, SkillEnum.AWS, SkillEnum.Dotnet, SkillEnum.Vuetify, SkillEnum.JavaScript ],
+		relevantExperience: ExperienceIdEnum.Buildable,
 	},
 	{
-		id: 7,
+		id: ProjectIdEnum.Stanford,
 		title: 'Stanford Health Tracking App',
 		description: `
 			Cross-platform health watching app where users (or patient providers) can log daily information and keep on top of data. 
 			I was tasked with the actual tracking page where users input their various data points (heart rate, weight, steps, etc) and then see them graphed in different ways with notifications for streaks. 
 			I also worked on the overall structure of the app, the .NET backend and admin interface in Angular.
 		`,
-		skills: ['flutter', 'dart', 'isar', 'angular', '.net', 'c#', 'git'],
-		relevantExperience: 1,
+		skills: [ SkillEnum.Flutter, SkillEnum.Angular, SkillEnum.Dotnet, SkillEnum.SQL ],
+		relevantExperience: ExperienceIdEnum.Buildable,
 	},
 	{
-		id: 2,
-		title: 'Slimes! Discord Bot',
-		description: "Discord bot built with discord.py and Pillow. Features a custom image splicing and generation so that users can create unique slimes to trade and collect. Website built in Angular with a Firebase backend for hosting and data providing so that users can more easily view their collections.",
-		links: [
-			{
-				title: 'website',
-				href: 'https://slimes.lavask.in',
-				icon: 'fas fa-globe',
-			},
-			{
-				title: 'github',
-				href: 'https://github.com/lavaskin/slimes-bot',
-				icon: 'fab fa-github',
-			},
-			{
-				title: 'bot invite',
-				href: 'https://discord.com/api/oauth2/authorize?client_id=491793054894653452&permissions=8&scope=bot',
-				icon: 'fas fa-robot',
-			}
-		],
-		skills: ['discord.py', 'python', 'pillow', 'angular', 'firestore', 'firebase', 'git'],
-		relevantExperience: 2,
-		images: [
-			'assets/pictures/slimes/0.webp',
-			'assets/pictures/slimes/1.webp',
-			'assets/pictures/slimes/2.webp',
-		],
-	},
-	{
-		id: 3,
-		title: 'guapish.com',
-		description: `
-			Angular website for a smaller podcast using typescript data files to store data and firebase for hosting. Features advanced sorting and filtering features with a modern UI. 
-			Updated weekly as new episodes are released.
-		`,
-		links: [
-			{
-				title: 'website',
-				href: 'https://guapish.com/',
-				icon: 'fas fa-globe',
-			},
-			{
-				title: 'github',
-				href: 'https://github.com/lavaskin/guapish.com',
-				icon: 'fab fa-github',
-			}
-		],
-		skills: ['angular', 'typescript', 'firebase', 'html', 'css', 'git'],
-		images: [
-			'assets/pictures/guapish/0.webp',
-			'assets/pictures/guapish/1.webp',
-			'assets/pictures/guapish/2.webp',
-			'assets/pictures/guapish/3.webp',
-			'assets/pictures/guapish/4.webp',
-		],
-		relevantExperience: 2,
-	},
-	{
-		id: 4,
+		id: ProjectIdEnum.CrannyGUI,
 		title: 'Cranny GUI',
 		description: `
 			Nuxt3 GUI frontend for the channel reactor platform monitoring software. Takes in data through the channel reactor rest api to use in various live graphs and tables. 
 			Classified software, so no screenshots or links.
 		`,
-		skills: ['vue3', 'nuxt3', 'javascript', 'css', 'html', 'drogon'],
-		relevantExperience: 3,
+		skills: [ SkillEnum.Nuxt3, SkillEnum.VueJS, SkillEnum.Drogon ],
+		relevantExperience: ExperienceIdEnum.EtherForm,
 	},
 	{
-		id: 8,
-		title: 'jacksoneggers.com',
+		id: ProjectIdEnum.ServiceCenter,
+		title: 'Service Center',
 		description: `
-			Built with pure Angular; hosted with Firebase hosting. Simple portfolio website that consumes static typescript data files to showcase my projects and experience, as well as link to various relevant socials. 
-			Automatic deploys on push to master through Github actions.
+			Trusted by over 80,000 healthcare organizations, Service Center by Office Ally® enables fast and easy claims submission. 
+			Real-time eligibility & benefits verification and automated claims processing workflows reduce paperwork and speed up reimbursement. 
+			Frontend built in Angular with a .NET manager backend, primarily leveraging SQL for data management/processing and Kubernetes for deployments/hosting.
 		`,
 		links: [
 			{
-				title: 'github',
-				href: 'https://github.com/lavaskin/jacksoneggers.com',
-				icon: 'fab fa-github',
+				title: 'website',
+				href: 'https://cms.officeally.com/products/service-center',
+				icon: 'fas fa-globe',
 			},
 		],
-		skills: ['angular', 'typescript', 'firebase', 'html', 'css', 'git'],
-		relevantExperience: 2,
+		skills: [ SkillEnum.Dotnet, SkillEnum.Angular, SkillEnum.SQL, SkillEnum.Kubernetes ],
+		relevantExperience: ExperienceIdEnum.OfficeAlly,
+		images: [
+			'assets/pictures/service_center/claims_list.png'
+		]
 	}
 ];
 
