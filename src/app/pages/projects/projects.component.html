@@ -1,13 +1,15 @@
 <div class="page">
 
 	<h1>
-		Projects 
+		<span>Projects</span>
 		<a href="https://github.com/lavaskin" target="_blank"><i class="fab fa-github"></i></a>
 	</h1>
 
 
-	<app-project *ngFor="let p of projects"
-		[project]="p"
-		[highlighted]="highlightedProject === p.id"></app-project>
+	@for (p of projects; track p) {
+		<app-project
+			[project]="p"
+			[highlighted]="highlightedProject === p.id" />
+	}
 
 </div>

@@ -1,10 +1,9 @@
-import { NgModule } from "@angular/core";
-import { Routes, RouterModule } from "@angular/router";
-import { HomeComponent } from "./pages/home/home.component";
-import { ProjectsComponent } from "./pages/projects/projects.component";
-import { ExperienceComponent } from "./pages/experience/experience.component";
+import { Routes } from '@angular/router';
+import { HomeComponent } from './pages/home/home.component';
+import { ProjectsComponent } from './pages/projects/projects.component';
+import { ExperienceComponent } from './pages/experience/experience.component';
 
-const routes: Routes = [
+export const routes: Routes = [
 	{ path: 'home', component: HomeComponent },
 	{ path: 'projects', component: ProjectsComponent },
 	{ path: 'projects/:id', component: ProjectsComponent },
@@ -12,10 +11,3 @@ const routes: Routes = [
 	{ path: 'experience/:id', component: ExperienceComponent },
 	{ path: '**', redirectTo: 'home' }
 ];
-
-@NgModule({
-	declarations: [],
-	imports: [RouterModule.forRoot(routes)],
-	exports: [RouterModule]
-})
-export class AppRoutingModule { }
