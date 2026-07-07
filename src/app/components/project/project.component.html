@@ -1,70 +1,90 @@
-<div class="container" [id]="'p'+project.id" [ngClass]="highlighted ? 'highlighted' : ''">
+<div class="container" [id]="'p'+project.id" [class]="highlighted ? 'highlighted' : ''">
 
 	<h2>{{ project.title }}</h2>
 	<p>{{ project.description }}</p>
 
 	<!-- Links -->
-	<div class="horz-list" *ngIf="project.links">
-		<a *ngFor="let l of project.links" [href]="l.href" target="_blank" tabindex="0">
-			<i *ngIf="l.icon" [ngClass]="l.icon"></i> {{ l.title }}
-		</a>
-	</div>
+	@if (project.links) {
+		<div class="horz-list">
+			@for (l of project.links; track l) {
+				<a [href]="l.href" target="_blank" tabindex="0">
+					@if (l.icon) {
+						<i [class]="l.icon"></i>
+					}
+					<span>{{ l.title }}</span>
+				</a>
+			}
+		</div>
+	}
 
 	<!-- Skill Chips -->
 	<div class="horz-list">
-		<app-chip *ngFor="let s of project.skills"
-			[color]="highlighted ? 'var(--color-accent-other)' : 'var(--color-accent)'"
-			[text]="s"></app-chip>
+		@for (s of project.skills; track s) {
+			<app-chip
+				[color]="highlighted ? 'var(--color-accent-other)' : 'var(--color-accent)'"
+				[text]="s"></app-chip>
+		}
 	</div>
 
 	<!-- Images List -->
 	<div class="horz-list images">
-		<img *ngFor="let i of project.images; let idx = index"
-			[src]="i" [alt]="project.title"
-			(click)="modalImage = idx; showModal = true"
-			tabindex="0" />
+		@for (i of project.images; track i; let idx = $index) {
+			<img
+				[src]="i" [alt]="project.title"
+				(click)="modalImage = idx; showModal = true"
+				tabindex="0" />
+		}
 	</div>
 
 	<!-- Relevant Experience Button -->
-	<a *ngIf="!extraLink && project.relevantExperience !== undefined"
-		[routerLink]="'/experience/' + project.relevantExperience"
-		class="btn-wrapper">
-		
-		<button class="btn">
-			relevant experience
-			<i class="fas fa-angle-right"></i>
-		</button>
-	</a>
+	@if (!extraLink && project.relevantExperience !== undefined) {
+		<a
+			[routerLink]="'/experience/' + project.relevantExperience"
+			class="btn-wrapper">
+			<button class="btn">
+				<span>relevant experience</span>
+				<i class="fas fa-angle-right"></i>
+			</button>
+		</a>
+	}
 
 	<!-- Goto projects button -->
-	<a *ngIf="extraLink" [routerLink]="extraLink" class="btn-wrapper">
-		<button class="btn">
-			see more
-			<i class="fas fa-angle-right"></i>
-		</button>
-	</a>
+	@if (extraLink) {
+		<a [routerLink]="extraLink" class="btn-wrapper">
+			<button class="btn">
+				<span>see more</span>
+				<i class="fas fa-angle-right"></i>
+			</button>
+		</a>
+	}
 
 	<!-- Highlighted Arrow-->
-	<i *ngIf="highlighted" class="highlight-point fas fa-right-long"></i>
+	@if (highlighted) {
+		<i class="highlight-point fas fa-right-long"></i>
+	}
 
 </div>
 
 <!-- Image Popup Modal -->
-<app-modal [title]="project.title" [(show)]="showModal" *ngIf="project.images">
+@if (project.images) {
+	<app-modal [title]="project.title" [(show)]="showModal">
+		<div class="modal-body">
+			<img [src]="project.images[modalImage]"
+				[alt]="project.title"
+				(click)="nextImage()"
+				tabindex="0" />
+			<!-- Action Buttons -->
+			@if (project.images.length > 1) {
+				<button class="left" (click)="lastImage()">
+					<i class="fas fa-left"></i>
+				</button>
+			}
+			@if (project.images.length > 1) {
+				<button class="right" (click)="nextImage()">
+					<i class="fas fa-right"></i>
+				</button>
+			}
+		</div>
+	</app-modal>
+}
 	
-	<div class="modal-body">
-		<img [src]="project.images[modalImage]" 
-			[alt]="project.title" 
-			(click)="nextImage()"
-			tabindex="0" />
-		
-		<!-- Action Buttons -->
-		<button class="left" (click)="lastImage()" *ngIf="project.images.length > 1">
-			<i class="fas fa-left"></i>
-		</button>
-		<button class="right" (click)="nextImage()" *ngIf="project.images.length > 1">
-			<i class="fas fa-right"></i>
-		</button>
-	</div>
-
-</app-modal>

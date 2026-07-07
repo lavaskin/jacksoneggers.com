@@ -1,11 +1,11 @@
-import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 
 @Component({
-	selector: 'app-modal',
-	templateUrl: './modal.component.html',
-	styleUrls: ['./modal.component.css']
+    selector: 'app-modal',
+    templateUrl: './modal.component.html',
+    styleUrls: ['./modal.component.css'],
 })
-export class ModalComponent implements OnInit {
+export class ModalComponent {
 	@Input() public show!: boolean;
 	@Output() public showChange: EventEmitter<boolean> = new EventEmitter<boolean>();
 
@@ -13,10 +13,6 @@ export class ModalComponent implements OnInit {
 	@Input() public title: string = '';
 
 	@ViewChild('background') public background!: ElementRef;
-	
-	constructor() { }
-
-	ngOnInit(): void { }
 
 	public close(event?: MouseEvent): void {
 		// Determine if the click was outside the dialog

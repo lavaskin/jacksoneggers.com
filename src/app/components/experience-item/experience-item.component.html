@@ -1,43 +1,58 @@
-<div class="container" [id]="'e'+experience.id" [ngClass]="highlighted ? 'highlighted' : ''">
+<div class="container" [id]="'e'+experience.id" [class.highlighted]="highlighted">
 
 	<div class="head">
-		<!-- <i *ngIf="experience.end === 'Present'" class="fas fa-briefcase"></i> -->
-		<p *ngIf="experience.link"><a [href]="experience.link" target="_blank" tabindex="0">{{ experience.place }}</a></p>
-		<p *ngIf="!experience.link">{{ experience.place }}</p>
+		@if (experience.link) {
+			<p><a [href]="experience.link" target="_blank" tabindex="0">{{ experience.place }}</a></p>
+		}
+		@if (!experience.link) {
+			<p>{{ experience.place }}</p>
+		}
 		<p>({{ experience.position }})</p>
 	</div>
 
 	<p class="timeline"><i class="fas fa-calendar"></i> {{ experience.start }} - {{ experience.end}}</p>
 
-	<p class=desc>{{ experience.description }}</p>
+	<p class="desc">{{ experience.description }}</p>
 
 	<!-- Relevant Projects Links (Only show on experiences tab) -->
-	<div class="projects" *ngIf="experience.relevantProjects.length > 0 && !extraLink">
-		<span><i class="fas fa-folder"></i> Relevant Projects: </span>
-		<a *ngFor="let id of experience.relevantProjects; let idx=index"
-			[routerLink]="'/projects/'+id"
-			tabindex="0">
-			{{ getProjectNameFromID(id) }}
-			<span *ngIf="idx !== experience.relevantProjects.length - 1">, </span>
-		</a>
-	</div>
+	@if (experience.relevantProjects.length > 0 && !extraLink) {
+		<div class="projects">
+			<span><i class="fas fa-folder"></i> Relevant Projects: </span>
+			@for (id of experience.relevantProjects; track id; let idx = $index) {
+				<a
+					[routerLink]="'/projects/'+id"
+					tabindex="0">
+					{{ getProjectNameFromID(id) }}
+					@if (idx !== experience.relevantProjects.length - 1) {
+						<span>, </span>
+					}
+				</a>
+			}
+		</div>
+	}
 
 	<!-- Skill Chips -->
 	<div class="chips">
-		<app-chip *ngFor="let s of experience.skills"
-			[color]="highlighted ? 'var(--color-accent-other)' : 'var(--color-accent)'"	
-			[text]="s" ></app-chip>
+		@for (s of experience.skills; track s) {
+			<app-chip
+				[color]="highlighted ? 'var(--color-accent-other)' : 'var(--color-accent)'"
+				[text]="s" ></app-chip>
+		}
 	</div>
 
 	<!-- Goto Experiences Button -->
-	<a *ngIf="extraLink" [routerLink]="extraLink" class="btn-wrapper">
-		<button class="btn">
-			see more
-			<i class="fas fa-angle-right"></i>
-		</button>
-	</a>
+	@if (extraLink) {
+		<a [routerLink]="extraLink" class="btn-wrapper">
+			<button class="btn">
+				<span>see more</span>
+				<i class="fas fa-angle-right"></i>
+			</button>
+		</a>
+	}
 
 	<!-- Highlighted Arrow-->
-	<i *ngIf="highlighted" class="highlight-point fas fa-right-long"></i>
+	@if (highlighted) {
+		<i class="highlight-point fas fa-right-long"></i>
+	}
 
 </div>
