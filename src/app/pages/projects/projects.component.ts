@@ -1,36 +1,35 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import projectsData from 'src/app/data/projects.data';
+import projectsData from '../../data/projects.data';
+import { ProjectComponent } from '../../components/project/project.component';
 
 @Component({
-	selector: 'app-projects',
-	templateUrl: './projects.component.html',
-	styleUrls: ['./projects.component.css']
+    selector: 'app-projects',
+    templateUrl: './projects.component.html',
+    styleUrls: ['./projects.component.css'],
+    imports: [ProjectComponent]
 })
 export class ProjectsComponent implements OnInit {
 	public projects = projectsData;
 	
-	private pidSubscribtion: any;
+	private pidSubscription: any;
 	public highlightedProject?: number;
-	
-	constructor(private route: ActivatedRoute) { }
 
+	private _route = inject(ActivatedRoute);
+	
 	ngOnInit(): void {
-		// Grab the id from the url
-		this.pidSubscribtion = this.route.paramMap.subscribe(params => {
+		this.pidSubscription = this._route.paramMap.subscribe(params => {
 			const pid = params.get('id');
 			
 			if (pid === null || isNaN(parseInt(pid))) return;
 
-			// If not, set the active experience
 			this.highlightedProject = parseInt(pid);
-			// And scroll to it
 			const element = document.getElementById(`p${pid}`);
 			if (element !== null) element.scrollIntoView({behavior: 'smooth'});
 		});
 	}
 
 	ngOnDestroy(): void {
-		this.pidSubscribtion.unsubscribe();
+		this.pidSubscription.unsubscribe();
 	}
 }

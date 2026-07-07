@@ -1,33 +1,33 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import experiencesData from 'src/app/data/experience.data';
+import experiencesData from '../../data/experience.data';
+import { ExperienceItemComponent } from '../../components/experience-item/experience-item.component';
 
 @Component({
-	selector: 'app-experience-page',
-	templateUrl: './experience.component.html',
-	styleUrls: ['./experience.component.css']
+    selector: 'app-experience-page',
+    templateUrl: './experience.component.html',
+    styleUrls: ['./experience.component.css'],
+    imports: [ExperienceItemComponent]
 })
 export class ExperienceComponent implements OnInit {
 	public experiences = experiencesData;
 
-	private eidSubscribtion: any;
+	private eidSubscription: any;
 	public highlightedExperience?: number;
-	
-	constructor(private route: ActivatedRoute) { }
+
+	private _route = inject(ActivatedRoute);
 
 	ngOnInit(): void {
-		// Grab the id from the url
-		this.eidSubscribtion = this.route.paramMap.subscribe(params => {
+		this.eidSubscription = this._route.paramMap.subscribe(params => {
 			const eid = params.get('id');
 			
 			if (eid === null || isNaN(parseInt(eid))) return;
 
-			// If not, set the active experience
 			this.highlightedExperience = parseInt(eid);
 		});
 	}
 
 	ngOnDestroy(): void {
-		this.eidSubscribtion.unsubscribe();
+		this.eidSubscription.unsubscribe();
 	}
 }

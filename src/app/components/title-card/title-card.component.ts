@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import Link from 'src/app/models/link.model';
+import Link from '../../models/link.model';
 
 @Component({
-	selector: 'app-title-card',
-	templateUrl: './title-card.component.html',
-	styleUrls: ['./title-card.component.css']
+    selector: 'app-title-card',
+    templateUrl: './title-card.component.html',
+    styleUrls: ['./title-card.component.css'],
 })
-export class TitleCardComponent implements OnInit {
+export class TitleCardComponent {
 	public links: Link[] = [
 		{
 			href: 'https://github.com/lavaskin',
@@ -23,7 +23,9 @@ export class TitleCardComponent implements OnInit {
 			title: 'resume',
 			icon: 'fas fa-file-pdf'
 		},
+		
 	];
+	
 	public contacts: Link[] = [
 		{
 			href: 'mailto:me@jacksoneggers.com',
@@ -36,8 +38,4 @@ export class TitleCardComponent implements OnInit {
 			icon: 'fas fa-phone'
 		}
 	];
-	
-	constructor() { }
-
-	ngOnInit(): void { }
 }

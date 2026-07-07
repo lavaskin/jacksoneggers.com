@@ -1,44 +1,40 @@
 import { Component, OnInit } from '@angular/core';
-import experienceData from 'src/app/data/experience.data';
-import projectsData from 'src/app/data/projects.data';
-import { ExperienceIdEnum } from 'src/app/models/enums/experience.enum';
-import { ProjectIdEnum } from 'src/app/models/enums/projects.enum';
-import Experience from 'src/app/models/experience.model';
-import Project from 'src/app/models/project.model';
+import experienceData from '../../data/experience.data';
+import projectsData from '../../data/projects.data';
+import { ExperienceIdEnum } from '../../models/enums/experience.enum';
+import { ProjectIdEnum } from '../../models/enums/projects.enum';
+import Experience from '../../models/experience.model';
+import Project from '../../models/project.model';
+import { TitleCardComponent } from '../../components/title-card/title-card.component';
+import { ProjectComponent } from '../../components/project/project.component';
+import { ExperienceItemComponent } from '../../components/experience-item/experience-item.component';
 
 @Component({
-	selector: 'app-home',
-	templateUrl: './home.component.html',
-	styleUrls: ['./home.component.css']
+    selector: 'app-home',
+    templateUrl: './home.component.html',
+    styleUrls: ['./home.component.css'],
+    imports: [TitleCardComponent, ProjectComponent, ExperienceItemComponent]
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
 	public recentExperience: Experience = this.getFeaturedExperience(ExperienceIdEnum.OfficeAlly);
 	public featuredProject: Project = this.getFeaturedProject(ProjectIdEnum.ServiceCenter);
-	
-	constructor() { }
-
-	ngOnInit(): void { }
 
 	ngAfterViewInit(): void {
-		// Grab all the section tags outside of the first
 		const sectionsCollection = document.getElementsByTagName('section') as HTMLCollectionOf<HTMLElement>;
 		const sections = Array.from(sectionsCollection);
 		
-		// Make them all fade in sequentially
 		function fadeInSections(sections: any, index: number) {
 			if (index >= sections.length) return;
 			
 			const section = sections[index];
-			section.classList.add('slide-fade-in'); // Add the class to trigger the animation after a delay
+			section.classList.add('slide-fade-in');
 			
-			// Start the next animation 250ms after the current one starts
 			setTimeout(() => fadeInSections(sections, index + 1), 250);
 		}
 		  
-		fadeInSections(sections, 1); // Start the fading animation
+		fadeInSections(sections, 1);
 	}
 
-	// Finds a project by ID, if it doesn't exist, return the first project
 	private getFeaturedProject(id: ProjectIdEnum): Project {
 		const project = projectsData.find(project => project.id === id);
 		return project ? project : projectsData[0];

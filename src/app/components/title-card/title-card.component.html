@@ -12,12 +12,20 @@
 		</div>
 
 		<div class="head__right__links">
-			<a *ngFor="let l of links" [href]="l.href" tabindex="0" target="_blank"><i *ngIf="l.icon" [ngClass]="l.icon"></i> {{ l.title }}</a>
+			@for (l of links; track l) {
+				<a [href]="l.href" tabindex="0" target="_blank">@if (l.icon) {
+					<i [class]="l.icon"></i>
+				} {{ l.title }}</a>
+			}
 		</div>
 
 		<div class="head__right__contact">
-			<a *ngFor="let l of contacts" [href]="l.href" tabindex="0"><i *ngIf="l.icon" [ngClass]="l.icon"></i> {{ l.title }}</a>
+			@for (l of contacts; track l) {
+				<a [href]="l.href" tabindex="0">@if (l.icon) {
+					<i [class]="l.icon"></i>
+				} {{ l.title }}</a>
+			}
 		</div>
 	</div>
-	
+
 </section>
