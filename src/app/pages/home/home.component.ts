@@ -23,7 +23,7 @@ export class HomeComponent {
 		const sectionsCollection = document.getElementsByTagName('section') as HTMLCollectionOf<HTMLElement>;
 		const sections = Array.from(sectionsCollection);
 		
-		function fadeInSections(sections: any, index: number) {
+		function fadeInSections(sections: HTMLElement[], index: number) {
 			if (index >= sections.length) return;
 			
 			const section = sections[index];

@@ -2,6 +2,7 @@ import { Component, OnInit, ChangeDetectionStrategy, inject } from '@angular/cor
 import { ActivatedRoute } from '@angular/router';
 import projectsData from '../../data/projects.data';
 import { ProjectComponent } from '../../components/project/project.component';
+import { Subscription } from 'rxjs';
 
 @Component({
     selector: 'app-projects',
@@ -12,7 +13,7 @@ import { ProjectComponent } from '../../components/project/project.component';
 export class ProjectsComponent implements OnInit {
 	public projects = projectsData;
 	
-	private pidSubscription: any;
+	private pidSubscription!: Subscription;
 	public highlightedProject?: number;
 
 	private _route = inject(ActivatedRoute);

@@ -2,6 +2,7 @@ import { Component, OnInit, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import experiencesData from '../../data/experience.data';
 import { ExperienceItemComponent } from '../../components/experience-item/experience-item.component';
+import { Subscription } from 'rxjs';
 
 @Component({
     selector: 'app-experience-page',
@@ -12,7 +13,7 @@ import { ExperienceItemComponent } from '../../components/experience-item/experi
 export class ExperienceComponent implements OnInit {
 	public experiences = experiencesData;
 
-	private eidSubscription: any;
+	private eidSubscription!: Subscription;
 	public highlightedExperience?: number;
 
 	private _route = inject(ActivatedRoute);
